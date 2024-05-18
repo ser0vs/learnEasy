@@ -5,12 +5,14 @@ import Login from './components/Login';
 import Registration from './components/RegistrationScreen';
 import Recovery from './components/Recovery';
 import Home from './components/Home';
+import WelcomeScreen from './components/WelcomeScreen';
 const Stack = createStackNavigator();
 
 const App = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Registration">
+      <Stack.Navigator initialRouteName="WelcomeScreen">
+        <Stack.Screen name="WelcomeScreen" component={WelcomeScreen} options={{ headerShown: false }}/>
         <Stack.Screen name="Registration" component={Registration} />
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="Home" component={Home} />

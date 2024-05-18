@@ -144,6 +144,11 @@ const styles = StyleSheet.create({
     fontSize: 15,
     borderColor: '#6513BD',
     backgroundColor: '#FFFFFF',
+    shadowColor: '#000000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
   },
   forgotPassword: {
     marginBottom: 10,
