@@ -78,7 +78,7 @@ const Login = ({ navigation }) => {
       
       <View style={styles.footer}>
         <Text style={styles.signupOptionText}>
-          Don’t have an account? <Text style={styles.signupLink} onPress={() => Alert.alert('Sign up')}>Sign up</Text>
+          Don’t have an account? <Text style={styles.signupLink} onPress={() => navigation.navigate('Registration')}>Sign up</Text>
         </Text>
       </View>
     </View>
@@ -143,6 +143,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     fontSize: 15,
     borderColor: '#6513BD',
+    backgroundColor: '#FFFFFF',
   },
   forgotPassword: {
     marginBottom: 10,

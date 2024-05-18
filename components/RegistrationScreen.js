@@ -26,7 +26,7 @@ const Registration = ({ navigation }) => {
       const fileInfo = await FileSystem.getInfoAsync(usersFilePath);
       if (!fileInfo.exists) {
         // If the file doesn't exist, download it from the assets and copy it to the document directory
-        const asset = Asset.fromModule(require('../components/users.json'));
+        const asset = Asset.fromModule(require('./users.json'));
         await asset.downloadAsync();
         await FileSystem.copyAsync({
           from: asset.localUri,
@@ -168,6 +168,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     fontSize: 15,
     borderColor: '#6513BD',
+    backgroundColor: '#FFFFFF',
   },
   signUpButton: {
     backgroundColor: '#d8b4fe',

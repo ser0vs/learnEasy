@@ -94,6 +94,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     fontSize: 15,
     borderColor: '#6513BD',
+    backgroundColor: '#FFFFFF',
   },
   button: {
     backgroundColor: '#d8b4fe',
