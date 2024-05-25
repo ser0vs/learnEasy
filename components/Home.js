@@ -4,53 +4,53 @@ import PercentageCircle from 'react-native-percentage-circle';
 
 
 const Home = () => {
+  let completedTasks = [1, 8, 5];
+  let totalTasks = [10, 10, 10];
+  let taskNames = ["Topology", "Biology", "Geography"]
   return (
     <View style={styles.container}>
-      <Text style={styles.welcome}>Welcome to the Home Page!</Text>
-
-      <View style={styles.containerSecond}>
-        {/* Left column with progress circles */}
-        <View style={styles.column}>
-          <PercentageCircle radius={25} percent={10} color="#ff0000" borderWidth={4}>
-            <Text style={styles.progressText}>10%</Text>
-          </PercentageCircle>
-          <PercentageCircle radius={25} percent={20} color="#ff0000" borderWidth={4}>
-            <Text style={styles.progressText}>20%</Text>
-          </PercentageCircle>
-          <PercentageCircle radius={25} percent={80} color="#ff0000" borderWidth={4}>
-            <Text style={styles.progressText}>80%</Text>
-          </PercentageCircle>
+        <View style={styles.headerContainer}>
+        <View style={styles.row}>
+          <Text style={styles.headerTextBig}>Hey!</Text>
         </View>
-
-        {/* Central column with course names */}
-        <View style={styles.column}>
-          <Text>Topology</Text>
-          <Text>Biology</Text>
-          <Text>Geography</Text>
-        </View>
-
-        {/* Right column with progress representation */}
-        <View style={styles.column}>
-          <Text>1/10</Text>
-          <Text>2/10</Text>
-          <Text>8/10</Text>
-        </View>
+        
+        <Text style={styles.headerTextSmall}>What would you like to learn today?</Text>
       </View>
 
+      <View style={styles.containerSecond}>
+        <Text style={styles.text}>Learning progress</Text>
+      </View>
 
-
+      
       <View style={styles.containerThird}>
+         {completedTasks.map((completed, index) => {
+          const percent = (completed / totalTasks[index]) * 100;
+          return (
+            <View style={styles.row} key={index}>
+              <PercentageCircle radius={10} percent={percent} color="#000000" borderWidth={3}>
+                <Text style={styles.progressText}></Text>
+              </PercentageCircle>
+              <Text>   </Text>
+              <Text style={styles.tasksText}>{`${taskNames[index]}`.slice(0, 20)}</Text>
+              <Text style={styles.completedTasksText}>{`${completed}/${totalTasks[index]}`.padEnd(5)}</Text>
+            </View>
+          );
+        })}
+        
+      </View>
+
+      <View style={styles.containerButtons}>
       {/* Purple Background Shape */}
       
       
       <TouchableOpacity style={styles.button}>
-        <Text style={styles.buttonText}>Open the last topic</Text>
+        <Text style={styles.buttonText}>Open the Last Topic</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.button}>
-        <Text style={styles.buttonText}>My courses</Text>
+        <Text style={styles.buttonText}>My Courses</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.button}>
-        <Text style={styles.buttonText}>Log in</Text>
+        <Text style={styles.buttonText}>Find New Courses</Text>
       </TouchableOpacity>
       </View>
     </View>
@@ -64,20 +64,52 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#FFFFFF',
   },
-  welcome: {
-    fontSize: 24,
+  headerContainer: {
+    backgroundColor: '#f5f5f5',
+    width: '100%',
+    paddingTop: 30,
+    paddingHorizontal: 20,
+    paddingBottom: 30,
+    alignItems: 'flex-start',
+  },
+  headerTextBig: {
+    fontSize: 30,
     fontWeight: 'bold',
+    textAlign: 'left',
+  },
+  headerTextSmall: {
+    fontSize: 18,
+    marginTop: 10,
   },
   buttonsGroup: {
     marginBottom: 15,
   },
   containerSecond: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-    padding: 20, 
-    zIndex: 2,
+    width: '100%',
+    paddingTop: 30,
+    paddingHorizontal: 50,
+    paddingBottom: 10,
+    alignItems: 'flex-start', // Left align the text
   },
   containerThird: {
+    width: 300, 
+    height: 110,
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    padding: 20,
+    backgroundColor: '#FFFFFF',
+    zIndex: 2,
+    borderRadius: 10, // Rounded corners
+    shadowColor: '#000', // Shadow color
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25, // Shadow opacity
+    shadowRadius: 3.84, // Shadow radius
+    elevation: 5, // Android shadow
+  },
+  containerButtons: {
     flex: 1,
     justifyContent: 'center',
     padding: 20, 
@@ -97,16 +129,29 @@ const styles = StyleSheet.create({
 	  padding: 5, 
 	  zIndex: 2,
   },
-  leftColumn: {
-    alignItems: 'center',
+  row: {
+    flexDirection: 'row',
+    alignItems: 'left',
+    marginTop: 0, // Add margin between text components
   },
-  centralColumn: {
-    flex: 1,
-    alignItems: 'center',
+  progressText: {
+    fontSize: 14,
+    fontWeight: 'bold',
+    marginVertical: 10,
   },
-  rightColumn: {
-    alignItems: 'center',
+  tasksText: {
+    fontSize: 16,
+    height: 20,
+    width: 200,
   },
+  completedTasksText: {
+    fontSize: 16,
+    height: 20,
+    width: 40,
+  },
+  text: {
+    fontSize: 16,
+  }
 });
 
 export default Home;
