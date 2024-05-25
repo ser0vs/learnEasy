@@ -14,6 +14,7 @@ const validCredentials = [
 const Login = ({ navigation }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [isModalVisible, setIsModalVisible] = useState(false);
 
   const handleLogin = () => {
     const isValidUser = validCredentials.some(
@@ -21,7 +22,7 @@ const Login = ({ navigation }) => {
     );
 
     if (isValidUser) {
-      navigation.navigate('Home');
+      navigation.navigate('CourseList'); // Navigate to CourseList page
     } else {
       Alert.alert(
         'Oops  :(',
@@ -34,55 +35,53 @@ const Login = ({ navigation }) => {
       );
     }
   };
+
   return (
     <View style={styles.container}>
-    <Svg height="100%" width="100%" style={styles.svg}>
+      <Svg height="100%" width="100%" style={styles.svg}>
         <Path
           d="M0,300 Q400,250 300,100 T900,100 T800,300 T1000,100 T0,-20"
           fill="#d8b4fe"
           scale="1"
         />
       </Svg>
- 
-    <View style={styles.containerSecond}>
-      {/* Purple Background Shape */}
-      
-      <Text style={styles.title}>Welcome back!</Text>
-      <Text style={styles.subtitle}>Log in</Text>
-      <View style={styles.inputGroup}>
-        <Text style={styles.label}>Username:</Text>
-        <TextInput
-          style={styles.input}
-          value={username}
-          onChangeText={setUsername}
-          placeholder="Your username"
-          autoCapitalize="none"
-        />
-      </View>
-      <View style={styles.inputGroup}>
-        <Text style={styles.label}>Password:</Text>
-        <TextInput
-          style={styles.input}
-          value={password}
-          onChangeText={setPassword}
-          placeholder="Password"
-          secureTextEntry
-        />
-      </View>
-      <TouchableOpacity onPress={() => navigation.navigate('Recovery')}>
-        <Text style={styles.forgotPasswordText}>Forgot password?</Text>
-      </TouchableOpacity>
-      <TouchableOpacity onPress={handleLogin} style={styles.loginButton}>
-        <Text style={styles.loginButtonText}>Log in</Text>
-      </TouchableOpacity>
-      
-      <View style={styles.footer}>
-        <Text style={styles.signupOptionText}>
-          Don’t have an account? <Text style={styles.signupLink} onPress={() => Alert.alert('Sign up')}>Sign up</Text>
-        </Text>
+      <View style={styles.containerSecond}>
+        <Text style={styles.title}>Welcome back!</Text>
+        <Text style={styles.subtitle}>Log in</Text>
+        <View style={styles.inputGroup}>
+          <Text style={styles.label}>Username:</Text>
+          <TextInput
+            style={styles.input}
+            value={username}
+            onChangeText={setUsername}
+            placeholder="Your username"
+            autoCapitalize="none"
+          />
+        </View>
+        <View style={styles.inputGroup}>
+          <Text style={styles.label}>Password:</Text>
+          <TextInput
+            style={styles.input}
+            value={password}
+            onChangeText={setPassword}
+            placeholder="Password"
+            secureTextEntry
+          />
+        </View>
+        <TouchableOpacity onPress={() => navigation.navigate('Recovery')}>
+          <Text style={styles.forgotPasswordText}>Forgot password?</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={handleLogin} style={styles.loginButton}>
+          <Text style={styles.loginButtonText}>Log in</Text>
+        </TouchableOpacity>
+        
+        <View style={styles.footer}>
+          <Text style={styles.signupOptionText}>
+            Don’t have an account? <Text style={styles.signupLink} onPress={() => Alert.alert('Sign up')}>Sign up</Text>
+          </Text>
+        </View>
       </View>
     </View>
-  </View>
   );
 };
 
@@ -102,23 +101,21 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: 0,
     left: 0,
-    width: "80",
-    height: "80",
+    width: '100%',
+    height: '50%',
     padding: 0, 
     zIndex: 1,
   },
-  
   title: {
     fontSize: 30,
     fontWeight: 'bold',
     marginBottom: 10,
     textAlign: 'center',
     color: '#000000',
-    position: 'relative',
     fontFamily: 'Poppins-Regular',
   },
   subtitle: {
-    fontSize: 50,
+    fontSize: 20,
     fontWeight: 'bold',
     marginBottom: 20,
     textAlign: 'center',
@@ -130,7 +127,6 @@ const styles = StyleSheet.create({
   },
   label: {
     fontSize: 18,
-    fontWeight: 'strong',
     marginBottom: 5,
     color: '#000000',
   },
@@ -143,10 +139,6 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     fontSize: 15,
     borderColor: '#6513BD',
-  },
-  forgotPassword: {
-    marginBottom: 10,
-    alignItems: 'center',
   },
   forgotPasswordText: {
     fontSize: 16,
@@ -166,10 +158,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
     color: '#000000',
-	  padding: 5, 
-	  zIndex: 2,
   },
-  
   footer: {
     alignItems: 'center',
     paddingBottom: 20,
