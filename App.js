@@ -31,7 +31,6 @@ const MainStack = () => (
     <Stack.Screen name="FindCourses" component={FindCourses} />
     <Stack.Screen name="MyCourse" component={MyCourse} />
     <Stack.Screen name="Home" component={Home} />
-    <Stack.Screen name="Login" component={Login} />
     <Stack.Screen name="Cours" component={Cours} />
     <Stack.Screen name="Registration" component={Registration} />
   </Stack.Navigator>
@@ -39,11 +38,17 @@ const MainStack = () => (
 
 const App = () => (
   <NavigationContainer>
-    <RootStack.Navigator mode="modal" headerMode="none">
-      <RootStack.Screen name="Auth" component={AuthStack} />
-      <RootStack.Screen name="Main" component={MainStack} />
-    </RootStack.Navigator>
-  </NavigationContainer>
+      <Stack.Navigator initialRouteName="WelcomeScreen">
+        <Stack.Screen name="WelcomeScreen" component={WelcomeScreen} options={{ headerShown: false }}/>
+        <Stack.Screen name="Registration" component={Registration} />
+        <Stack.Screen name="Login" component={Login} />
+        <Stack.Screen name="Home" component={Home}/>
+        <Stack.Screen name="Recovery" component={Recovery} />
+        <Stack.Screen name="FindCourses" component={FindCourses} />
+        <Stack.Screen name="MyCourse" component={MyCourse} />
+        <Stack.Screen name="Cours" component={Cours} />
+      </Stack.Navigator>
+    </NavigationContainer>
 );
 
 export default App;

@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import PercentageCircle from 'react-native-percentage-circle';
 
 
-const Home = () => {
+const Home = ({ navigation }) => {
   let completedTasks = [1, 8, 5];
   let totalTasks = [10, 10, 10];
   let taskNames = ["Topology", "Biology", "Geography"]
@@ -50,7 +50,7 @@ const Home = () => {
         <Text style={styles.buttonText}>My Courses</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.button}>
-        <Text style={styles.buttonText}>Find New Courses</Text>
+        <Text style={styles.buttonText} onPress={() => navigation.navigate('FindCourses')}>Find New Courses</Text>
       </TouchableOpacity>
       </View>
     </View>
