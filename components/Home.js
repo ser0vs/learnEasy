@@ -7,7 +7,7 @@ import { Ionicons } from '@expo/vector-icons';
 const Home = ({ navigation }) => {
   let completedTasks = [1, 8, 5];
   let totalTasks = [10, 10, 10];
-  let taskNames = ["Topology"]
+  let taskNames = ["Topology", "Biology", "Technology"]
   return (
     <View style={styles.container}>
         <View style={styles.headerContainer}>
@@ -56,8 +56,8 @@ const Home = ({ navigation }) => {
       </TouchableOpacity>
       </View>
       <View style={styles.footer}>
-        <Ionicons name="home-outline" size={24} color="gray" onPress={() => navigation.navigate('Home')} />
-        <Ionicons name="search" size={24} color="gray" onPress={() => navigation.navigate('FindCourses')} />
+        <Ionicons name="home" size={24} color="#6513BD" onPress={() => navigation.navigate('Home')} />
+        <Ionicons name="search-outline" size={24} color="gray" onPress={() => navigation.navigate('FindCourses')} />
         <Ionicons name="person-outline" size={24} color="gray"onPress={() => navigation.navigate('MyCourse')} />
       </View>
     </View>

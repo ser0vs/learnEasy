@@ -19,9 +19,10 @@ const FindCourses = ({ navigation }) => {
     setCourses(courseData.courses);
   }, []);
 
-  const CourseCard = ({ title, duration, description, section }) => {
+  const CourseCard = ({ title, duration, description, section, course }) => {
     return (
-      <TouchableOpacity onPress={() => navigation.navigate('Cours')}>
+      <TouchableOpacity onPress={() => navigation.navigate('CourseDetails', { course })} >
+        
         <View style={styles.courseCard}>
           <View style={styles.courseHeader}>
             <Text style={styles.courseName}>{title}</Text>
@@ -80,12 +81,13 @@ const FindCourses = ({ navigation }) => {
             duration={course.duration}
             description={course.section}
             section={course.level}
+            course={course}
           />
         ))}
       </ScrollView>
       <View style={styles.footer}>
         <Ionicons name="home-outline" size={24} color="gray" onPress={() => navigation.navigate('Home')} />
-        <Ionicons name="search" size={24} color="gray" onPress={() => navigation.navigate('FindCourses')} />
+        <Ionicons name="search" size={24} color="#6513BD" onPress={() => navigation.navigate('FindCourses')} />
         <Ionicons name="person-outline" size={24} color="gray"onPress={() => navigation.navigate('MyCourse')} />
       </View>
     </View>
