@@ -3,31 +3,60 @@ import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-nati
 import { Ionicons } from '@expo/vector-icons';
 import Svg, { Path } from 'react-native-svg';
 import { CourseContext } from './CourseContext.js';
+import { useNavigation } from '@react-navigation/native';
 
-const CourseCard = ({ name, hours, description, level, onRemoveCourse }) => {
+import coursesData from '../courses.json';
+
+const CourseCard = ({ name, hours, description, level, onRemoveCourse, course }) => {
+  const navigation = useNavigation();
+
+  const courses = coursesData.courses;
+
+  if (!Array.isArray(courses)) {
+    console.error("Expected an array of courses");
+    return null;
+  }
+
   return (
-    <View style={styles.courseCard}>
-      <View style={styles.courseHeader}>
-        <Text style={styles.courseName}>{name}</Text>
-        <Text style={styles.courseHours}>{hours} </Text>
-      </View>
-      <View style={styles.descriptionContainer}>
-        <Text style={styles.courseDescription}>{description}</Text>
-        <TouchableOpacity onPress={() => onRemoveCourse(name)}>
-          <Ionicons name="remove-outline" size={20} color="gray" />
-        </TouchableOpacity>
-      </View>
-      <View style={styles.courseFooter}>
-        <Text style={[styles.courseLevel, level === 'Beginner Friendly' ? styles.beginner : styles.intermediate]}>
-          {level}
-        </Text>
-        <View style={styles.icons}>
-          <Ionicons name="book-outline" size={20} color="gray" />
-          <Ionicons name="headset-outline" size={20} color="gray" />
-          <Ionicons name="videocam-outline" size={20} color="gray" />
+    <TouchableOpacity onPress={() => {
+      const providedName = course.name;
+      
+      // TODO
+
+      // for (let i = 0; i < courses.length; i++) {
+      //   if (courses[i].name === providedName) {
+      //     // If found, return the course object
+      //     return navigation.navigate('CourseDetails', {course});
+      //   }
+      // }
+      // console.log("Course not found... " + {providedName});
+      
+    }
+      
+      } >
+      <View style={styles.courseCard}>
+        <View style={styles.courseHeader}>
+          <Text style={styles.courseName}>{name}</Text>
+          <Text style={styles.courseHours}>{hours} </Text>
+        </View>
+        <View style={styles.descriptionContainer}>
+          <Text style={styles.courseDescription}>{description}</Text>
+          <TouchableOpacity onPress={() => onRemoveCourse(name)}>
+            <Ionicons name="remove-outline" size={20} color="gray" />
+          </TouchableOpacity>
+        </View>
+        <View style={styles.courseFooter}>
+          <Text style={[styles.courseLevel, level === 'Beginner Friendly' ? styles.beginner : styles.intermediate]}>
+            {level}
+          </Text>
+          <View style={styles.icons}>
+            <Ionicons name="book-outline" size={20} color="gray" />
+            <Ionicons name="headset-outline" size={20} color="gray" />
+            <Ionicons name="videocam-outline" size={20} color="gray" />
+          </View>
         </View>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 
@@ -57,6 +86,7 @@ const MyCourse = ({ navigation }) => {
             description={course.description}
             level={course.level}
             onRemoveCourse={removeCourse}
+            course = {course}
           />
         ))}
       </ScrollView>
