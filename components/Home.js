@@ -48,7 +48,8 @@ const Home = ({ navigation }) => {
         <Text style={styles.buttonText}>Open the Last Topic</Text>
       </TouchableOpacity> */}
       <TouchableOpacity style={styles.button}>
-        <Text style={styles.buttonText} onPress={() => navigation.navigate('MyCourse')}>My Courses</Text>
+        {/* <Text style={styles.buttonText} onPress={() => navigation.navigate('MyCourse')}>My Courses</Text> */}
+        <Text style={styles.buttonText} onPress={() => navigation.navigate('CourseList')}>My Courses</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.button}>
         <Text style={styles.buttonText} onPress={() => navigation.navigate('FindCourses')}>Find New Courses</Text>

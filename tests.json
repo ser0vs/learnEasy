@@ -1,0 +1,334 @@
+{
+	"tests": [
+	  {
+		"courseId": 1,
+		"questions": [
+		  {
+			"question": "Who was elected King of the Holy Roman Empire in 1273?",
+			"options": ["Maximilian I", "Charles V", "Rudolf I", "Maria Theresa"],
+			"correctAnswer": "Rudolf I"
+		  },
+		  {
+			"question": "What significant event happened in 1379 for the Habsburgs?",
+			"options": ["The Reformation", "The Thirty Years' War", "The Peace of Westphalia", "The division of the House of Habsburg"],
+			"correctAnswer": "The division of the House of Habsburg"
+		  },
+		  {
+			"question": "Which Habsburg ruler carried out extensive reforms in the 18th century?",
+			"options": ["Charles V", "Maria Theresa", "Maximilian I", "Rudolf I"],
+			"correctAnswer": "Maria Theresa"
+		  },
+		  {
+			"question": "Which war ended with the Peace of Westphalia?",
+			"options": ["The Hundred Years' War", "The Napoleonic Wars", "The Thirty Years' War", "The War of the Spanish Succession"],
+			"correctAnswer": "The Thirty Years' War"
+		  },
+		  {
+			"question": "Which marriage significantly expanded the Habsburg influence?",
+			"options": ["Rudolf I and Isabella", "Charles V and Isabella", "Maximilian I and Mary of Burgundy", "Maria Theresa and Francis I"],
+			"correctAnswer": "Maximilian I and Mary of Burgundy"
+		  },
+		  {
+			"question": "When did the Habsburg rule end?",
+			"options": ["1918", "1848", "1806", "1939"],
+			"correctAnswer": "1918"
+		  },
+		  {
+			"question": "What was the main cause of the Thirty Years' War?",
+			"options": ["Territorial disputes", "Religious conflict", "Economic issues", "Dynastic succession"],
+			"correctAnswer": "Religious conflict"
+		  },
+		  {
+			"question": "Which ruler was known for modernizing the Habsburg Empire?",
+			"options": ["Rudolf I", "Charles V", "Maria Theresa", "Maximilian I"],
+			"correctAnswer": "Maria Theresa"
+		  },
+		  {
+			"question": "What area did the Habsburgs originate from?",
+			"options": ["Austria", "Switzerland", "Germany", "France"],
+			"correctAnswer": "Switzerland"
+		  },
+		  {
+			"question": "Who initiated the Reformation that challenged the Habsburgs?",
+			"options": ["John Calvin", "Martin Luther", "Henry VIII", "Ulrich Zwingli"],
+			"correctAnswer": "Martin Luther"
+		  }
+		]
+	  },
+	  {
+		"courseId": 2,
+		"questions": [
+		  {
+			"question": "Who wrote Romeo and Juliet?",
+			"options": ["Charles Dickens", "Mark Twain", "William Shakespeare", "Jane Austen"],
+			"correctAnswer": "William Shakespeare"
+		  },
+		  {
+			"question": "Who are the two main characters in Romeo and Juliet?",
+			"options": ["Hamlet and Ophelia", "Romeo and Juliet", "Macbeth and Lady Macbeth", "Othello and Desdemona"],
+			"correctAnswer": "Romeo and Juliet"
+		  },
+		  {
+			"question": "What are the names of the feuding families in Romeo and Juliet?",
+			"options": ["Montagues and Capulets", "Lannisters and Starks", "Borgias and Medicis", "Tudors and Plantagenets"],
+			"correctAnswer": "Montagues and Capulets"
+		  },
+		  {
+			"question": "Where is the play Romeo and Juliet set?",
+			"options": ["London", "Verona", "Paris", "Rome"],
+			"correctAnswer": "Verona"
+		  },
+		  {
+			"question": "Who performs Romeo and Juliet's secret marriage?",
+			"options": ["Friar Laurence", "Friar John", "The Nurse", "Lord Capulet"],
+			"correctAnswer": "Friar Laurence"
+		  },
+		  {
+			"question": "Why is Romeo banished from Verona?",
+			"options": ["For stealing", "For marrying Juliet", "For killing Tybalt", "For refusing to marry Rosaline"],
+			"correctAnswer": "For killing Tybalt"
+		  },
+		  {
+			"question": "How does Juliet fake her death?",
+			"options": ["She takes a potion", "She stabs herself", "She poisons herself", "She drowns herself"],
+			"correctAnswer": "She takes a potion"
+		  },
+		  {
+			"question": "Who finds Juliet after she takes the potion?",
+			"options": ["Romeo", "The Nurse", "Paris", "Friar Laurence"],
+			"correctAnswer": "The Nurse"
+		  },
+		  {
+			"question": "What does Romeo do when he believes Juliet is dead?",
+			"options": ["He flees Verona", "He seeks revenge", "He takes his own life", "He marries another"],
+			"correctAnswer": "He takes his own life"
+		  },
+		  {
+			"question": "What happens when Juliet awakens and finds Romeo dead?",
+			"options": ["She runs away", "She takes her own life", "She marries Paris", "She confronts her family"],
+			"correctAnswer": "She takes her own life"
+		  }
+		]
+	  },
+	  {
+		"courseId": 3,
+		"questions": [
+		  {
+			"question": "Who composed The Four Seasons?",
+			"options": ["Ludwig van Beethoven", "Wolfgang Amadeus Mozart", "Antonio Vivaldi", "Johann Sebastian Bach"],
+			"correctAnswer": "Antonio Vivaldi"
+		  },
+		  {
+			"question": "How many concertos are in The Four Seasons?",
+			"options": ["Two", "Three", "Four", "Five"],
+			"correctAnswer": "Four"
+		  },
+		  {
+			"question": "What season does the first concerto in The Four Seasons represent?",
+			"options": ["Spring", "Summer", "Autumn", "Winter"],
+			"correctAnswer": "Spring"
+		  },
+		  {
+			"question": "Which season is characterized by slower movements and thunderstorms in The Four Seasons?",
+			"options": ["Spring", "Summer", "Autumn", "Winter"],
+			"correctAnswer": "Summer"
+		  },
+		  {
+			"question": "What is depicted in the Autumn concerto of The Four Seasons?",
+			"options": ["Harvest season", "Flowers blooming", "Snowfall", "Heatwaves"],
+			"correctAnswer": "Harvest season"
+		  },
+		  {
+			"question": "What instrument is primarily featured in The Four Seasons?",
+			"options": ["Piano", "Violin", "Flute", "Cello"],
+			"correctAnswer": "Violin"
+		  },
+		  {
+			"question": "When were The Four Seasons composed?",
+			"options": ["1600-1601", "1716-1717", "1801-1802", "1905-1906"],
+			"correctAnswer": "1716-1717"
+		  },
+		  {
+			"question": "What do the crisp, staccato notes in the Winter concerto represent?",
+			"options": ["Rain", "Heatwaves", "Cold and biting winds", "Flowers blooming"],
+			"correctAnswer": "Cold and biting winds"
+		  },
+		  {
+			"question": "In what year were The Four Seasons published?",
+			"options": ["1695", "1725", "1750", "1800"],
+			"correctAnswer": "1725"
+		  },
+		  {
+			"question": "What nationality was Antonio Vivaldi?",
+			"options": ["German", "Italian", "French", "Austrian"],
+			"correctAnswer": "Italian"
+		}
+	]
+  },
+  {
+	"courseId": 4,
+	"questions": [
+	  {
+		"question": "Which river is commonly regarded as the longest river in the world?",
+		"options": ["Amazon", "Yangtze", "Mississippi", "Nile"],
+		"correctAnswer": "Nile"
+	  },
+	  {
+		"question": "How long is the Nile River?",
+		"options": ["4,130 miles", "3,976 miles", "2,345 miles", "1,234 miles"],
+		"correctAnswer": "4,130 miles"
+	  },
+	  {
+		"question": "How many countries does the Nile River flow through?",
+		"options": ["Five", "Seven", "Eleven", "Thirteen"],
+		"correctAnswer": "Eleven"
+	  },
+	  {
+		"question": "Which of these countries is NOT part of the Nile River basin?",
+		"options": ["Tanzania", "Uganda", "Brazil", "Egypt"],
+		"correctAnswer": "Brazil"
+	  },
+	  {
+		"question": "What is the significance of the Nile Delta?",
+		"options": ["It is a major desert", "It is a rich agricultural region", "It is a mountain range", "It is an island"],
+		"correctAnswer": "It is a rich agricultural region"
+	  },
+	  {
+		"question": "Which ancient civilization was primarily based around the Nile River?",
+		"options": ["Mesopotamia", "Indus Valley", "Ancient Egypt", "Maya"],
+		"correctAnswer": "Ancient Egypt"
+	  },
+	  {
+		"question": "What did the Aswan High Dam create?",
+		"options": ["Lake Victoria", "Lake Tanganyika", "Lake Nasser", "Lake Chad"],
+		"correctAnswer": "Lake Nasser"
+	  },
+	  {
+		"question": "When was the Aswan High Dam completed?",
+		"options": ["1950", "1965", "1970", "1985"],
+		"correctAnswer": "1970"
+	  },
+	  {
+		"question": "What type of geographical feature is the Nile Delta?",
+		"options": ["A mountain range", "A desert", "A river delta", "A peninsula"],
+		"correctAnswer": "A river delta"
+	  },
+	  {
+		"question": "How has the Nile River impacted agriculture in Egypt?",
+		"options": ["It has no impact", "It provides fertile land", "It creates deserts", "It reduces crop yield"],
+		"correctAnswer": "It provides fertile land"
+	}
+]
+},
+{
+"courseId": 5,
+"questions": [
+  {
+	"question": "Which form of government was developed in Athens during the 5th century BC?",
+	"options": ["Monarchy", "Oligarchy", "Democracy", "Dictatorship"],
+	"correctAnswer": "Democracy"
+  },
+  {
+	"question": "What were the Persian Wars?",
+	"options": ["A series of conflicts between Greece and the Persian Empire", "A civil war in Greece", "A war between Rome and Persia", "A trade war between Greece and Persia"],
+	"correctAnswer": "A series of conflicts between Greece and the Persian Empire"
+  },
+  {
+	"question": "Which period followed the Persian Wars and saw a cultural and political flowering in Athens?",
+	"options": ["The Dark Ages", "The Golden Age", "The Hellenistic Period", "The Roman Period"],
+	"correctAnswer": "The Golden Age"
+  },
+  {
+	"question": "Who fought in the Peloponnesian War?",
+	"options": ["Athens and Sparta", "Rome and Carthage", "Persia and Egypt", "Athens and Thebes"],
+	"correctAnswer": "Athens and Sparta"
+  },
+  {
+	"question": "Who was Alexander the Great?",
+	"options": ["A philosopher", "A playwright", "A conqueror", "A poet"],
+	"correctAnswer": "A conqueror"
+  },
+  {
+	"question": "What was the Hellenistic Period?",
+	"options": ["The period following the death of Alexander the Great", "The early period of Greek history", "The period of Greek colonization", "The time of the Persian Wars"],
+	"correctAnswer": "The period following the death of Alexander the Great"
+  },
+  {
+	"question": "Which famous structure was built during the Golden Age of Athens?",
+	"options": ["The Colosseum", "The Parthenon", "The Pyramids", "The Great Wall"],
+	"correctAnswer": "The Parthenon"
+  },
+  {
+	"question": "Which battle was a key conflict during the Persian Wars?",
+	"options": ["Battle of Thermopylae", "Battle of Actium", "Battle of Tours", "Battle of Hastings"],
+	"correctAnswer": "Battle of Thermopylae"
+  },
+  {
+	"question": "What city was the center of Greek learning and culture during the Hellenistic Period?",
+	"options": ["Athens", "Alexandria", "Sparta", "Thebes"],
+	"correctAnswer": "Alexandria"
+  },
+  {
+	"question": "Which philosopher taught Alexander the Great?",
+	"options": ["Socrates", "Plato", "Aristotle", "Epicurus"],
+	"correctAnswer": "Aristotle"
+  }
+]
+},
+{
+"courseId": 6,
+"questions": [
+  {
+	"question": "Where was Vincent van Gogh born?",
+	"options": ["France", "Netherlands", "Germany", "Belgium"],
+	"correctAnswer": "Netherlands"
+  },
+  {
+	"question": "In which city did van Gogh become influenced by the Impressionists?",
+	"options": ["Paris", "London", "Amsterdam", "Berlin"],
+	"correctAnswer": "Paris"
+  },
+  {
+	"question": "What is the title of the famous series of paintings van Gogh created featuring sunflowers?",
+	"options": ["Sunflowers", "Irises", "Wheatfields", "Starry Night"],
+	"correctAnswer": "Sunflowers"
+  },
+  {
+	"question": "Which mental health issue did van Gogh struggle with?",
+	"options": ["Depression", "Anxiety", "Schizophrenia", "Bipolar Disorder"],
+	"correctAnswer": "Depression"
+  },
+  {
+	"question": "In which city did van Gogh paint 'Starry Night'?",
+	"options": ["Arles", "Saint-Rémy-de-Provence", "Paris", "Auvers-sur-Oise"],
+	"correctAnswer": "Saint-Rémy-de-Provence"
+  },
+  {
+	"question": "What year did Vincent van Gogh die?",
+	"options": ["1880", "1890", "1900", "1910"],
+	"correctAnswer": "1890"
+  },
+  {
+	"question": "What was the relationship between van Gogh and Theo?",
+	"options": ["Friends", "Brothers", "Cousins", "Colleagues"],
+	"correctAnswer": "Brothers"
+  },
+  {
+	"question": "Which painting is considered one of van Gogh's most famous works?",
+	"options": ["The Scream", "The Persistence of Memory", "Mona Lisa", "Starry Night"],
+	"correctAnswer": "Starry Night"
+  },
+  {
+	"question": "Where is the Van Gogh Museum located?",
+	"options": ["Paris", "London", "Amsterdam", "Berlin"],
+	"correctAnswer": "Amsterdam"
+  },
+  {
+	"question": "Which artistic movement is van Gogh most associated with?",
+	"options": ["Impressionism", "Post-Impressionism", "Cubism", "Surrealism"],
+	"correctAnswer": "Post-Impressionism"
+  }
+]
+}
+]
+}
