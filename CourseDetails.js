@@ -8,7 +8,7 @@ const { width } = Dimensions.get('window');
 
 const CourseDetails = ({ route, navigation }) => {
   const { course } = route.params;
-  const { progress, setProgress } = uset(ProgressContext);
+  const { progress, setProgress } = useContext(ProgressContext);
 
   const openURL = (url) => {
     Linking.openURL(url).catch((err) => console.error("Couldn't load page", err));

@@ -23,7 +23,7 @@ const App = () => {
     <ProgressProvider>
       <CourseProvider>
         <NavigationContainer>
-          <Stack.Navigator initialRouteName="Home">
+          <Stack.Navigator initialRouteName="WelcomeScreen">
             <Stack.Screen name="FindCourses" component={FindCourses} />
             <Stack.Screen name="MyCourse" component={MyCourse} />
             <Stack.Screen name="Home" component={Home} />

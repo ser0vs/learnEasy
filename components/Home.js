@@ -5,7 +5,7 @@ import { Ionicons } from '@expo/vector-icons';
 
 
 const Home = ({ navigation }) => {
-  let completedTasks = [1, 8, 5];
+  let completedTasks = [4, 4, 4];
   let totalTasks = [10, 10, 10];
   let taskNames = ["Topology", "Biology", "Technology"]
   return (
