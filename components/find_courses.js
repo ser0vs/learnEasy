@@ -84,9 +84,9 @@ const FindCourses = ({ navigation }) => {
         ))}
       </ScrollView>
       <View style={styles.footer}>
-        <Ionicons name="settings-outline" size={24} color="gray" />
-        <Ionicons name="home-outline" size={24} color="gray" />
-        <Ionicons name="person-outline" size={24} color="gray" onPress={() => navigation.navigate('Home')} />
+        <Ionicons name="home-outline" size={24} color="gray" onPress={() => navigation.navigate('Home')} />
+        <Ionicons name="search" size={24} color="gray" onPress={() => navigation.navigate('FindCourses')} />
+        <Ionicons name="person-outline" size={24} color="gray"onPress={() => navigation.navigate('MyCourse')} />
       </View>
     </View>
   );

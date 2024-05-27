@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import PercentageCircle from 'react-native-percentage-circle';
+import { Ionicons } from '@expo/vector-icons';
 
 
 const Home = ({ navigation }) => {
   let completedTasks = [1, 8, 5];
   let totalTasks = [10, 10, 10];
-  let taskNames = ["Topology", "Biology", "Geography"]
+  let taskNames = ["Topology"]
   return (
     <View style={styles.container}>
         <View style={styles.headerContainer}>
@@ -52,6 +53,11 @@ const Home = ({ navigation }) => {
       <TouchableOpacity style={styles.button}>
         <Text style={styles.buttonText} onPress={() => navigation.navigate('FindCourses')}>Find New Courses</Text>
       </TouchableOpacity>
+      </View>
+      <View style={styles.footer}>
+        <Ionicons name="home-outline" size={24} color="gray" onPress={() => navigation.navigate('Home')} />
+        <Ionicons name="search" size={24} color="gray" onPress={() => navigation.navigate('FindCourses')} />
+        <Ionicons name="person-outline" size={24} color="gray"onPress={() => navigation.navigate('MyCourse')} />
       </View>
     </View>
   );
@@ -111,9 +117,9 @@ const styles = StyleSheet.create({
   },
   containerButtons: {
     flex: 1,
-    justifyContent: 'center',
-    padding: 20, 
-    zIndex: 2,
+    justifyContent: 'flex-end',
+    padding: 20,
+    marginBottom: 80,
   },
   button: {
     backgroundColor: '#faf289',
@@ -151,7 +157,16 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 16,
-  }
+  },
+  footer: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    padding: 16,
+    backgroundColor: '#FFFFFF',
+    position: 'absolute',
+    bottom: 0,
+    width: '100%',
+  },
 });
 
 export default Home;
