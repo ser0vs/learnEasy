@@ -17,8 +17,19 @@ export const ProgressProvider = ({ children }) => {
     });
   };
 
+  const countTrueFields = () => {
+    let count = 0;
+    for (const key in progress) {
+      if (progress[key] === true) {
+        count++;
+      }
+    }
+    return count;
+  };
+
+
   return (
-    <ProgressContext.Provider value={{ progress, setProgress, resetProgress }}>
+    <ProgressContext.Provider value={{ progress, setProgress, resetProgress, countTrueFields }}>
       {children}
     </ProgressContext.Provider>
   );

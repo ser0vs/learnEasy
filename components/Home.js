@@ -2,12 +2,60 @@ import React, { useContext } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import PercentageCircle from 'react-native-percentage-circle';
 import { Ionicons } from '@expo/vector-icons';
+import { CourseContext } from './CourseContext.js';
+import { ProgressContext } from '../ProgressContext';
 
 
 const Home = ({ navigation }) => {
-  let completedTasks = [4, 4, 4];
-  let totalTasks = [10, 10, 10];
-  let taskNames = ["Topology", "Biology", "Technology"]
+  const { myCourses } = useContext(CourseContext);
+  const { progress, countTrueFields } = useContext(ProgressContext);
+
+  let completedTasks = [];
+  let totalTasks = [];
+  let taskNames = [];
+  let chosenCourses = [];
+
+  try {
+          
+      const data = require('./courses.json');
+    
+      const courses = data.courses;
+
+      if (!Array.isArray(courses)) {
+          throw new Error('courses.json does not contain an array');
+      }
+
+      for (let i = 0; i < (myCourses.length <= 3 ? myCourses.length : 3); i++) {
+        const courseName = myCourses[i].name;
+        console.log(courseName)
+        const course = courses.find(course => course.title === courseName);
+        
+        if (course) {
+          const cnt = countTrueFields();
+          completedTasks.push(cnt);
+          totalTasks.push(2);
+          taskNames.push(course.title);
+          // chosenCourses.push(course);
+        } else {
+          console.error('Not found');
+        }
+      }
+
+
+      
+  } catch (error) {
+      console.error('Can not read courses.json:', error);
+  }
+
+  if (completedTasks.length === 0) {
+    completedTasks.push(-1);     // there are no tasks chosen
+  }
+
+  // let completedTasks = [4, 4, 4];
+  // let totalTasks = [10, 10, 10];
+  // let taskNames = ["Topology", "Biology", "Technology"]
+
+
   return (
     <View style={styles.container}>
         <View style={styles.headerContainer}>
@@ -26,16 +74,28 @@ const Home = ({ navigation }) => {
       <View style={styles.containerThird}>
          {completedTasks.map((completed, index) => {
           const percent = (completed / totalTasks[index]) * 100;
-          return (
-            <View style={styles.row} key={index}>
-              <PercentageCircle radius={10} percent={percent} color="#000000" borderWidth={3}>
-                <Text style={styles.progressText}></Text>
-              </PercentageCircle>
-              <Text>   </Text>
-              <Text style={styles.tasksText}>{`${taskNames[index]}`.slice(0, 20)}</Text>
-              <Text style={styles.completedTasksText}>{`${completed}/${totalTasks[index]}`.padEnd(5)}</Text>
-            </View>
-          );
+          const courseInfo = chosenCourses[index];
+          if (completed === -1) {      // if there are no tasks chosen
+            return (
+              <View style={styles.row} key={index}>
+                <Text>   </Text>
+                <Text style={styles.noTasksText}>Choose your thirst task!</Text>
+              </View>
+            );
+          } else {
+            return (
+//              <TouchableOpacity onPress={() => navigation.navigate('CourseDetails', { courseInfo })}>
+                <View style={styles.row} key={index}>
+                  <PercentageCircle radius={10} percent={percent} color="#000000" borderWidth={3}>
+                    <Text style={styles.progressText}></Text>
+                  </PercentageCircle>
+                  <Text>   </Text>
+                  <Text style={styles.tasksText}>{`${taskNames[index]}`.slice(0, 20)}</Text>
+                  <Text style={styles.completedTasksText}>{`${completed}/${totalTasks[index]}`.padEnd(5)}</Text>
+                </View>
+//              </TouchableOpacity>
+            );
+          }
         })}
         
       </View>
@@ -151,8 +211,14 @@ const styles = StyleSheet.create({
     height: 20,
     width: 200,
   },
+  noTasksText: {
+    fontSize: 14,
+    height: 20,
+    width: 200,
+    color: "grey",
+  },
   completedTasksText: {
-    fontSize: 16,
+    fontSize: 14,
     height: 20,
     width: 40,
   },
