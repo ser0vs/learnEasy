@@ -5,24 +5,26 @@ import Svg, { Path } from 'react-native-svg';
 import { useNavigation } from '@react-navigation/native';
 import { CourseContext } from './CourseContext';
 
-
 const courseData = require('./courses.json');
-
 const { width, height } = Dimensions.get('window');
 
-const FindCourses = ({ navigation }) => {
+const FindCourses = () => {
   const [courses, setCourses] = useState([]);
+  const [searchQuery, setSearchQuery] = useState('');
   const { addCourse } = useContext(CourseContext);
+  const navigation = useNavigation();
 
   useEffect(() => {
-    
     setCourses(courseData.courses);
   }, []);
 
+  const filteredCourses = courses.filter(course =>
+    course.title.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   const CourseCard = ({ title, duration, description, section, course }) => {
     return (
-      <TouchableOpacity onPress={() => navigation.navigate('CourseDetails', { course })} >
-        
+      <TouchableOpacity onPress={() => navigation.navigate('CourseDetails', { course })}>
         <View style={styles.courseCard}>
           <View style={styles.courseHeader}>
             <Text style={styles.courseName}>{title}</Text>
@@ -72,9 +74,11 @@ const FindCourses = ({ navigation }) => {
         style={styles.searchInput}
         placeholder="Search for courses"
         placeholderTextColor="gray"
+        value={searchQuery}
+        onChangeText={text => setSearchQuery(text)}
       />
       <ScrollView contentContainerStyle={styles.courseList}>
-        {courses.map(course => (
+        {filteredCourses.map(course => (
           <CourseCard
             key={course.id}
             title={course.title}
@@ -88,7 +92,7 @@ const FindCourses = ({ navigation }) => {
       <View style={styles.footer}>
         <Ionicons name="home-outline" size={24} color="gray" onPress={() => navigation.navigate('Home')} />
         <Ionicons name="search" size={24} color="#6513BD" onPress={() => navigation.navigate('FindCourses')} />
-        <Ionicons name="person-outline" size={24} color="gray"onPress={() => navigation.navigate('MyCourse')} />
+        <Ionicons name="person-outline" size={24} color="gray" onPress={() => navigation.navigate('MyCourse')} />
       </View>
     </View>
   );
@@ -173,12 +177,6 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: '#666',
     flex: 1,
-  },
-  plusSymbolDescription: {
-    fontSize: 24, 
-    fontWeight: 'bold',
-    color: '#666',
-    marginLeft: 8,
   },
   courseFooter: {
     flexDirection: 'row',
