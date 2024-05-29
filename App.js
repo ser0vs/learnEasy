@@ -25,14 +25,23 @@ const App = () => {
     <ProgressProvider>
       <CourseProvider>
         <NavigationContainer>
-          <Stack.Navigator initialRouteName="Home">
-            <Stack.Screen name="FindCourses" component={FindCourses} />
-            <Stack.Screen name="MyCourse" component={MyCourse} />
-            <Stack.Screen name="Home" component={Home} />
-            <Stack.Screen name="Login" component={Login} />
+          <Stack.Navigator 
+            initialRouteName="Home"
+            screenOptions={{
+              headerTitleAlign: 'center',
+              headerTitleStyle: {
+                fontSize: 20,
+                fontWeight: 'bold',
+                color: '#000',
+              },
+            }}>
+            <Stack.Screen name="FindCourses" component={FindCourses} options={{ title: 'Find new courses', headerLeft: null }} />
+            <Stack.Screen name="MyCourse" component={MyCourse} options={{ title: 'My courses', headerLeft: null }}/>
+            <Stack.Screen name="Home" component={Home} options={{ headerLeft: null }}/>
+            <Stack.Screen name="Login" component={Login} options={{ title: 'Log in' }}/>
             <Stack.Screen name="WelcomeScreen" component={WelcomeScreen} />
             <Stack.Screen name="Cours" component={Cours} />
-            <Stack.Screen name="Registration" component={Registration} />
+            <Stack.Screen name="Registration" component={Registration} options={{ title: 'Sign up' }}/>
             <Stack.Screen name="Recovery" component={Recovery} />
             <Stack.Screen name="CourseList" component={CourseList} />
             <Stack.Screen name="CourseDetails" component={CourseDetails} />

@@ -69,11 +69,11 @@ const MyCourse = ({ navigation }) => {
           scale="1"
         />
       </Svg>
-      <View style={styles.header}>
+      {/* <View style={styles.header}>
         <Ionicons name="arrow-back-outline" size={24} color="black" style={styles.backIcon} onPress={() => navigation.navigate('FindCourses')} /> 
         <Text style={styles.headerText}>My Course</Text>
         <Ionicons name="arrow-forward-outline" size={24} color="black" style={styles.forwardIcon} />
-      </View>
+      </View> */}
       <ScrollView contentContainerStyle={styles.courseList}>
         {myCourses.map((course, index) => (
           <CourseCard

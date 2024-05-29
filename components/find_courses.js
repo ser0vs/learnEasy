@@ -65,11 +65,11 @@ const FindCourses = () => {
           scale="1"
         />
       </Svg>
-      <View style={styles.header}>
+      {/* <View style={styles.header}>
         <Ionicons name="arrow-back-outline" size={24} color="black" style={styles.backIcon} onPress={() => navigation.navigate('Home')} />
         <Text style={styles.headerText}>Find new courses</Text>
         <Ionicons name="arrow-forward-outline" size={24} color="black" style={styles.forwardIcon} onPress={() => navigation.navigate('MyCourse')} />
-      </View>
+      </View> */}
       <TextInput
         style={styles.searchInput}
         placeholder="Search for courses"

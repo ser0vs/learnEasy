@@ -59,6 +59,7 @@ const Home = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
+      
         <View style={styles.headerContainer}>
         <View style={styles.row}>
           <Text style={styles.headerTextBig}>Hey!</Text>
