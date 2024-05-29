@@ -4,6 +4,7 @@ import CustomModal from './CustomModal';
 import testsData from './tests.json';  // Adjust the path if necessary
 import { ProgressContext } from './ProgressContext';
 
+
 const TestPage = ({ route, navigation }) => {
   const { course } = route.params;
   const [questions, setQuestions] = useState([]);
@@ -11,6 +12,10 @@ const TestPage = ({ route, navigation }) => {
   const { resetProgress } = useContext(ProgressContext);
   const [isModalVisible, setModalVisible] = useState(false);
   const [score, setScore] = useState(0);
+  const { progress, setProgress } = useContext(ProgressContext);
+  const courseProgress = progress[course.id] || { articleRead: false, videoWatched: false };
+
+  const [testTaken, setTestTaken] = useState(courseProgress.testTaken);
 
   useEffect(() => {
     const courseTest = testsData.tests.find(test => test.courseId === course.id);
@@ -34,6 +39,9 @@ const TestPage = ({ route, navigation }) => {
       }
     });
     setScore(newScore);
+    if (newScore >= 9) {
+      setTestTaken(true);
+    }
     setModalVisible(true);
   };
 

@@ -15,6 +15,8 @@ export const ProgressProvider = ({ children }) => {
       },
     }));
   };
+
+  
   const countTrueFields = (courseId) => {
     let count = 0;
     // Loop through the keys of the progress object for the courseId

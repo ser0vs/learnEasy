@@ -26,7 +26,7 @@ const App = () => {
       <CourseProvider>
         <NavigationContainer>
           <Stack.Navigator 
-            initialRouteName="Home"
+            initialRouteName="WelcomeScreen"
             screenOptions={{
               headerTitleAlign: 'center',
               headerTitleStyle: {
@@ -39,13 +39,13 @@ const App = () => {
             <Stack.Screen name="MyCourse" component={MyCourse} options={{ title: 'My courses', headerLeft: null }}/>
             <Stack.Screen name="Home" component={Home} options={{ headerLeft: null }}/>
             <Stack.Screen name="Login" component={Login} options={{ title: 'Log in' }}/>
-            <Stack.Screen name="WelcomeScreen" component={WelcomeScreen} />
+            <Stack.Screen name="WelcomeScreen" component={WelcomeScreen } options={{ title: 'Welcome!' }}/>
             <Stack.Screen name="Cours" component={Cours} />
             <Stack.Screen name="Registration" component={Registration} options={{ title: 'Sign up' }}/>
             <Stack.Screen name="Recovery" component={Recovery} />
             <Stack.Screen name="CourseList" component={CourseList} />
-            <Stack.Screen name="CourseDetails" component={CourseDetails} />
-            <Stack.Screen name="TestPage" component={TestPage} />
+            <Stack.Screen name="CourseDetails" component={CourseDetails} options={{ title: 'Course' }}/>
+            <Stack.Screen name="TestPage" component={TestPage} options={{ title: 'Test' }}/>
             <Stack.Screen name="CustomModal" component={CustomModal} />
           </Stack.Navigator>
         </NavigationContainer>

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import PercentageCircle from 'react-native-percentage-circle';
 import { Ionicons } from '@expo/vector-icons';
@@ -9,6 +9,9 @@ import { ProgressContext } from '../ProgressContext';
 const Home = ({ navigation }) => {
   const { myCourses } = useContext(CourseContext);
   const { progress, countTrueFields } = useContext(ProgressContext);
+
+  const [username, setUsername] = useState('');
+  console.log(username);
 
   let completedTasks = [];
   let totalTasks = [];
@@ -59,7 +62,6 @@ const Home = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      
         <View style={styles.headerContainer}>
         <View style={styles.row}>
           <Text style={styles.headerTextBig}>Hey!</Text>
@@ -69,7 +71,7 @@ const Home = ({ navigation }) => {
       </View>
 
       <View style={styles.containerSecond}>
-        <Text style={styles.text}>Learning progress</Text>
+        <Text style={styles.text}>Learning Plan</Text>
       </View>
 
       
@@ -93,7 +95,10 @@ const Home = ({ navigation }) => {
                   </PercentageCircle>
                   <Text>   </Text>
                   <Text style={styles.tasksText}>{`${taskNames[index]}`.slice(0, 20)}</Text>
-                  <Text style={styles.completedTasksText}>{`${completed}/${totalTasks[index]}`.padEnd(5)}</Text>
+                  <Text style={styles.completedTasksText}>
+                    {`${completed}/`}
+                    <Text style={styles.completedTasksTextGrey}>{totalTasks[index]}</Text>
+                  </Text>
                 </View>
 //              </TouchableOpacity>
             );
@@ -142,13 +147,14 @@ const styles = StyleSheet.create({
     alignItems: 'flex-start',
   },
   headerTextBig: {
-    fontSize: 30,
+    fontSize: 40,
     fontWeight: 'bold',
     textAlign: 'left',
   },
   headerTextSmall: {
     fontSize: 18,
     marginTop: 10,
+    fontWeight: 'bold',
   },
   buttonsGroup: {
     marginBottom: 15,
@@ -224,8 +230,15 @@ const styles = StyleSheet.create({
     height: 20,
     width: 40,
   },
+  completedTasksTextGrey: {
+    fontSize: 14,
+    height: 20,
+    width: 40,
+    color: 'grey',
+  },
   text: {
-    fontSize: 16,
+    fontSize: 18,
+    fontWeight: 'bold',
   },
   footer: {
     flexDirection: 'row',
