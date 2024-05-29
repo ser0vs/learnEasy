@@ -119,7 +119,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: '#000000',
     position: 'relative',
-    fontFamily: 'Poppins-Regular',
   },
   subtitle: {
     fontSize: 50,
@@ -127,7 +126,6 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     textAlign: 'center',
     color: '#000000',
-    fontFamily: 'Comfortaa-Light',
   },
   inputGroup: {
     marginBottom: 15,

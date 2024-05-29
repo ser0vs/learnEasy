@@ -76,7 +76,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: '#000000',
     position: 'relative',
-    fontFamily: 'Poppins-Regular',
   },
   instructions: {
     fontSize: 18,

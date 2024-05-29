@@ -151,7 +151,6 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     textAlign: 'center',
     color: '#6513BD',
-    fontFamily: 'Poppins-Regular',
   },
   section: {
     fontSize: 18,

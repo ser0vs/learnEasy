@@ -66,7 +66,7 @@ const Home = ({ navigation }) => {
         <View style={styles.row}>
           <Text style={styles.headerTextBig}>
             Hey,
-            <Text style={styles.headerTextBigPink}>{` ${myUsername}!`}</Text>
+            <Text style={styles.headerTextBigPink}>{` ${myUsername}!🙂`}</Text>
             </Text>
         </View>
         

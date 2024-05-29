@@ -159,7 +159,6 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     textAlign: 'center',
     color: '#000000',
-    fontFamily: 'Poppins-Regular',
   },
   input: {
     height: 50,
