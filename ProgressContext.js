@@ -5,13 +5,13 @@ export const ProgressContext = createContext();
 export const ProgressProvider = ({ children }) => {
   const [progress, setProgress] = useState({});
 
-  const resetProgress = (courseId) => {
+  const updateProgress = (courseId, updates) => {
+    console.log('updateProgress', courseId, updates);
     setProgress((prevProgress) => ({
       ...prevProgress,
       [courseId]: {
-        articleRead: false,
-        videoWatched: false,
-        testTaken: false,
+        ...prevProgress[courseId],
+        ...updates,
       },
     }));
   };
@@ -30,7 +30,7 @@ export const ProgressProvider = ({ children }) => {
   };
 
   return (
-    <ProgressContext.Provider value={{ progress, setProgress, resetProgress, countTrueFields }}>
+    <ProgressContext.Provider value={{ progress, setProgress, updateProgress, countTrueFields }}>
       {children}
     </ProgressContext.Provider>
   );

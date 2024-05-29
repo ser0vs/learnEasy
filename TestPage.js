@@ -6,13 +6,13 @@ import { ProgressContext } from './ProgressContext';
 
 
 const TestPage = ({ route, navigation }) => {
+  const { progress, updateProgress } = useContext(ProgressContext);
   const { course } = route.params;
   const [questions, setQuestions] = useState([]);
   const [answers, setAnswers] = useState([]);
   const { resetProgress } = useContext(ProgressContext);
   const [isModalVisible, setModalVisible] = useState(false);
   const [score, setScore] = useState(0);
-  const { progress, setProgress } = useContext(ProgressContext);
   const courseProgress = progress[course.id] || { articleRead: false, videoWatched: false };
 
   const [testTaken, setTestTaken] = useState(courseProgress.testTaken);
@@ -39,8 +39,8 @@ const TestPage = ({ route, navigation }) => {
       }
     });
     setScore(newScore);
-    if (newScore >= 9) {
-      setTestTaken(true);
+    if (newScore >= 0) {
+      updateProgress(course.id, { articleRead: true, videoWatched: true, testTaken: true });
     }
     setModalVisible(true);
   };
@@ -48,7 +48,7 @@ const TestPage = ({ route, navigation }) => {
   const handleRetry = () => {
     setAnswers(Array(questions.length).fill(null));
     setModalVisible(false);
-    resetProgress();
+    updateProgress(course.id, { articleRead: false, videoWatched: false });
     navigation.navigate('CourseDetails', { course });
   };
 
