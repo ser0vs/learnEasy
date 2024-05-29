@@ -64,7 +64,7 @@ const TestPage = ({ route, navigation }) => {
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      <Text style={styles.title}>Test Page</Text>
+      {/* <Text style={styles.title}>Test Page</Text> */}
       {questions.map((question, index) => (
         <View key={index} style={styles.questionContainer}>
           <Text style={styles.questionText}>{question.question}</Text>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, ScrollView, Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import coursesData from './courses.json';  // Adjust the path if necessary
+import coursesData from './components/courses.json';  // Adjust the path if necessary
 
 const CourseList = () => {
   const navigation = useNavigation();

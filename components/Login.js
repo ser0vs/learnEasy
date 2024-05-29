@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Alert, Dimensions } from 'react-native';
 import Svg, { Path } from 'react-native-svg';
+import { ProgressContext } from '../ProgressContext';
 
 const { width, height } = Dimensions.get('window');
 
@@ -12,6 +13,8 @@ const validCredentials = [
 ];
 
 const Login = ({ navigation }) => {
+  const { setMyUsername } = useContext(ProgressContext);
+
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
@@ -21,6 +24,7 @@ const Login = ({ navigation }) => {
     );
 
     if (isValidUser) {
+      setMyUsername(username);
       navigation.navigate('Home');
     } else {
       Alert.alert(

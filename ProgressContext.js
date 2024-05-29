@@ -3,6 +3,8 @@ import React, { createContext, useState } from 'react';
 export const ProgressContext = createContext();
 
 export const ProgressProvider = ({ children }) => {
+  const [myUsername, setMyUsername] = useState('');
+
   const [progress, setProgress] = useState({});
 
   const updateProgress = (courseId, updates) => {
@@ -30,7 +32,7 @@ export const ProgressProvider = ({ children }) => {
   };
 
   return (
-    <ProgressContext.Provider value={{ progress, setProgress, updateProgress, countTrueFields }}>
+    <ProgressContext.Provider value={{ progress, setProgress, updateProgress, countTrueFields, myUsername, setMyUsername }}>
       {children}
     </ProgressContext.Provider>
   );

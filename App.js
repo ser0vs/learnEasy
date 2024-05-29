@@ -39,7 +39,7 @@ const App = () => {
             <Stack.Screen name="MyCourse" component={MyCourse} options={{ title: 'My courses', headerLeft: null }}/>
             <Stack.Screen name="Home" component={Home} options={{ headerLeft: null }}/>
             <Stack.Screen name="Login" component={Login} options={{ title: 'Log in' }}/>
-            <Stack.Screen name="WelcomeScreen" component={WelcomeScreen } options={{ title: 'Welcome!' }}/>
+            <Stack.Screen name="WelcomeScreen" component={WelcomeScreen } options={{ headerShown: false }}/>
             <Stack.Screen name="Cours" component={Cours} />
             <Stack.Screen name="Registration" component={Registration} options={{ title: 'Sign up' }}/>
             <Stack.Screen name="Recovery" component={Recovery} />

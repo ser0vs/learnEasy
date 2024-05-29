@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Alert, Dimensions } from 'react-native';
 import Svg, { Path } from 'react-native-svg';
 import * as FileSystem from 'expo-file-system';
 import { Asset } from 'expo-asset';
+import { ProgressContext } from '../ProgressContext';
 
 const { width, height } = Dimensions.get('window');
 
@@ -10,6 +11,7 @@ const { width, height } = Dimensions.get('window');
 const usersFilePath = FileSystem.documentDirectory + 'users.json';
 
 const Registration = ({ navigation }) => {
+  const { setMyUsername } = useContext(ProgressContext);
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -69,7 +71,7 @@ const Registration = ({ navigation }) => {
 
       // Save the updated users data back to the file
       await FileSystem.writeAsStringAsync(usersFilePath, JSON.stringify(usersData));
-      
+      setMyUsername(username);
       Alert.alert('Success', 'User registered successfully');
       navigation.navigate('Home'); // Navigate to the Home screen
     } catch (error) {

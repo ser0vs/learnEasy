@@ -8,7 +8,7 @@ import { ProgressContext } from '../ProgressContext';
 
 const Home = ({ navigation }) => {
   const { myCourses } = useContext(CourseContext);
-  const { progress, countTrueFields } = useContext(ProgressContext);
+  const { progress, countTrueFields, myUsername } = useContext(ProgressContext);
 
   const [username, setUsername] = useState('');
   console.log(username);
@@ -64,7 +64,10 @@ const Home = ({ navigation }) => {
     <View style={styles.container}>
         <View style={styles.headerContainer}>
         <View style={styles.row}>
-          <Text style={styles.headerTextBig}>Hey!</Text>
+          <Text style={styles.headerTextBig}>
+            Hey,
+            <Text style={styles.headerTextBigPink}>{` ${myUsername}!`}</Text>
+            </Text>
         </View>
         
         <Text style={styles.headerTextSmall}>What would you like to learn today?</Text>
@@ -150,6 +153,12 @@ const styles = StyleSheet.create({
     fontSize: 40,
     fontWeight: 'bold',
     textAlign: 'left',
+  },
+  headerTextBigPink: {
+    fontSize: 40,
+    fontWeight: 'bold',
+    textAlign: 'left',
+    color: "#918ffd",
   },
   headerTextSmall: {
     fontSize: 18,
