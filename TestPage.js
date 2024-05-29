@@ -39,7 +39,7 @@ const TestPage = ({ route, navigation }) => {
       }
     });
     setScore(newScore);
-    if (newScore >= 0) {
+    if (newScore >= 9) {
       updateProgress(course.id, { articleRead: true, videoWatched: true, testTaken: true });
     }
     setModalVisible(true);
@@ -48,7 +48,7 @@ const TestPage = ({ route, navigation }) => {
   const handleRetry = () => {
     setAnswers(Array(questions.length).fill(null));
     setModalVisible(false);
-    updateProgress(course.id, { articleRead: false, videoWatched: false });
+    updateProgress(course.id, { articleRead: false, videoWatched: false, testTaken: false });
     navigation.navigate('CourseDetails', { course });
   };
 

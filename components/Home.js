@@ -96,8 +96,8 @@ const Home = ({ navigation }) => {
                   <Text>   </Text>
                   <Text style={styles.tasksText}>{`${taskNames[index]}`.slice(0, 20)}</Text>
                   <Text style={styles.completedTasksText}>
-                    {`${completed}/`}
-                    <Text style={styles.completedTasksTextGrey}>{totalTasks[index]}</Text>
+                    {`${completed}`}
+                    <Text style={styles.completedTasksTextGrey}>{`/${totalTasks[index]}`}</Text>
                   </Text>
                 </View>
 //              </TouchableOpacity>
