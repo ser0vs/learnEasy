@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { View, Text, Image, TouchableOpacity, StyleSheet, ScrollView, Linking, Dimensions, Alert } from 'react-native';
 import { WebView } from 'react-native-webview';
 import Svg, { Path } from 'react-native-svg';
@@ -9,16 +9,29 @@ const { width } = Dimensions.get('window');
 const CourseDetails = ({ route, navigation }) => {
   const { course } = route.params;
   const { progress, setProgress } = useContext(ProgressContext);
+  
+  const courseProgress = progress[course.id] || { articleRead: false, videoWatched: false };
+
+  const [articleRead, setArticleRead] = useState(courseProgress.articleRead);
+  const [videoWatched, setVideoWatched] = useState(courseProgress.videoWatched);
+
+  useEffect(() => {
+    setProgress((prevProgress) => ({
+      ...prevProgress,
+      [course.id]: { articleRead, videoWatched }
+    }));
+  }, [articleRead, videoWatched]);
 
   const openURL = (url) => {
     Linking.openURL(url).catch((err) => console.error("Couldn't load page", err));
   };
 
   const markSectionComplete = (section) => {
-    setProgress((prevProgress) => ({
-      ...prevProgress,
-      [section]: true,
-    }));
+    if (section === 'articleRead') {
+      setArticleRead(true);
+    } else if (section === 'videoWatched') {
+      setVideoWatched(true);
+    }
   };
 
   return (
@@ -31,76 +44,75 @@ const CourseDetails = ({ route, navigation }) => {
         />
       </Svg>
       <View style={styles.containerSecond}>
-      <Text style={styles.title}>{course.title}</Text>
-      <Text style={styles.section}>{course.section}</Text>
-      <Text style={styles.duration}>{course.duration}</Text>
-      <Image
-        source={{ uri: course.image }}
-        style={styles.image}
-      />
-      <Text style={styles.description}>{course.description}</Text>
-      
-      {course.events.map((event, index) => (
-        <View key={index} style={styles.eventContainer}>
-          <Text style={styles.eventTitle}>{event.title}</Text>
-          <Text style={styles.eventContent}>{event.content}</Text>
-        </View>
-      ))}
-
-      <TouchableOpacity
-        style={progress.articleRead ? styles.completedButton : styles.progressButton}
-        onPress={() => markSectionComplete('articleRead')}
-      >
-        <Text style={styles.progressButtonText}>
-          {progress.articleRead ? "Article Read ✔️" : "I read the article"}
-        </Text>
-      </TouchableOpacity>
-
-      <WebView
-        style={styles.video}
-        javaScriptEnabled={true}
-        domStorageEnabled={true}
-        source={{ uri: course.video }}
-      />
-      
-      <TouchableOpacity
-        style={progress.videoWatched ? styles.completedButton : styles.progressButton}
-        onPress={() => markSectionComplete('videoWatched')}
-      >
-        <Text style={styles.progressButtonText}>
-          {progress.videoWatched ? "Video Watched ✔️" : "I watched the video"}
-        </Text>
-      </TouchableOpacity>
-
-      <View style={styles.linkSection}>
-        <Text style={styles.additionalText}>You might find these additional resources interesting:</Text>
-        {course.resources.map((resource, index) => (
-          <TouchableOpacity key={index} onPress={() => openURL(resource.url)}>
-            <Text style={styles.link}>{resource.title}</Text>
-          </TouchableOpacity>
+        <Text style={styles.title}>{course.title}</Text>
+        <Text style={styles.section}>{course.section}</Text>
+        <Text style={styles.duration}>{course.duration}</Text>
+        <Image
+          source={{ uri: course.image }}
+          style={styles.image}
+        />
+        <Text style={styles.description}>{course.description}</Text>
+        
+        {course.events.map((event, index) => (
+          <View key={index} style={styles.eventContainer}>
+            <Text style={styles.eventTitle}>{event.title}</Text>
+            <Text style={styles.eventContent}>{event.content}</Text>
+          </View>
         ))}
-      </View>
 
-      <TouchableOpacity
-        onPress={() => {
-          if (progress.articleRead && progress.videoWatched) {
-            navigation.navigate('TestPage', { course });
-          } else {
-            Alert.alert(
-              "Complete All Sections",
-              "Please complete all sections before taking the quiz.",
-              [{ text: "OK" }],
-              { cancelable: false }
-            );
-          }
-        }}
-        style={[
-          styles.testButton,
-          !(progress.articleRead && progress.videoWatched) && styles.disabledButton
-        ]}
-      >
-        <Text style={styles.testButtonText}>Go to Test Page 📝</Text>
-      </TouchableOpacity>
+        <TouchableOpacity
+          style={articleRead ? styles.completedButton : styles.progressButton}
+          onPress={() => markSectionComplete('articleRead')}
+        >
+          <Text style={styles.progressButtonText}>
+            {articleRead ? "Article Read ✔️" : "I read the article"}
+          </Text>
+        </TouchableOpacity>
+
+        <WebView
+          style={styles.video}
+          javaScriptEnabled={true}
+          domStorageEnabled={true}
+          source={{ uri: course.video }}
+        />
+        
+        <TouchableOpacity
+          style={videoWatched ? styles.completedButton : styles.progressButton}
+          onPress={() => markSectionComplete('videoWatched')}
+        >
+          <Text style={styles.progressButtonText}>
+            {videoWatched ? "Video Watched ✔️" : "I watched the video"}
+          </Text>
+        </TouchableOpacity>
+
+        <View style={styles.linkSection}>
+          <Text style={styles.additionalText}>You might find these additional resources interesting:</Text>
+          {course.resources.map((resource, index) => (
+            <TouchableOpacity key={index} onPress={() => openURL(resource.url)}>
+              <Text style={styles.link}>{resource.title}</Text>
+            </TouchableOpacity>
+          ))}
+        </View>
+        <TouchableOpacity
+          onPress={() => {
+            if (articleRead && videoWatched) {
+              navigation.navigate('TestPage', { course });
+            } else {
+              Alert.alert(
+                "Complete All Sections",
+                "Please complete all sections before taking the quiz.",
+                [{ text: "OK" }],
+                { cancelable: false }
+              );
+            }
+          }}
+          style={[
+            styles.testButton,
+            !(articleRead && videoWatched) && styles.disabledButton
+          ]}
+        >
+          <Text style={styles.testButtonText}>Go to Test Page 📝</Text>
+        </TouchableOpacity>
       </View>
     </ScrollView>
   );

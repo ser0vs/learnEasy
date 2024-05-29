@@ -13,6 +13,8 @@ import Recovery from './components/Recovery';
 import WelcomeScreen from './components/WelcomeScreen';
 import CourseList from './CourseList';
 import CourseDetails from './CourseDetails';
+import TestPage from './TestPage';
+import CustomModal from './CustomModal';
 
 
 
@@ -23,7 +25,7 @@ const App = () => {
     <ProgressProvider>
       <CourseProvider>
         <NavigationContainer>
-          <Stack.Navigator initialRouteName="WelcomeScreen">
+          <Stack.Navigator initialRouteName="Home">
             <Stack.Screen name="FindCourses" component={FindCourses} />
             <Stack.Screen name="MyCourse" component={MyCourse} />
             <Stack.Screen name="Home" component={Home} />
@@ -34,6 +36,8 @@ const App = () => {
             <Stack.Screen name="Recovery" component={Recovery} />
             <Stack.Screen name="CourseList" component={CourseList} />
             <Stack.Screen name="CourseDetails" component={CourseDetails} />
+            <Stack.Screen name="TestPage" component={TestPage} />
+            <Stack.Screen name="CustomModal" component={CustomModal} />
           </Stack.Navigator>
         </NavigationContainer>
       </CourseProvider>
