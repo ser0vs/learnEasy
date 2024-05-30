@@ -1,13 +1,13 @@
 import React from 'react';
 import { View, Image, Text, StyleSheet, TouchableOpacity } from 'react-native';
-// import Svg, { Path } from 'react-native-svg';
 
+// WelcomeScreen component displays a welcome message and options to log in or sign up
 const WelcomeScreen = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
       <Image
-        source={require('../assets/home_picture.png')} // Replace './path/to/your/image.png' with the actual path to your image
+        source={require('../assets/home_picture.png')}
         style={styles.image}
       />
       <TouchableOpacity onPress={() => navigation.navigate('Login')} style={styles.menuButton}>
@@ -22,8 +22,8 @@ const WelcomeScreen = ({ navigation }) => {
 
 const styles = StyleSheet.create({
   image: {
-    width: 310, // Adjust width according to your design
-    height: 400, // Adjust height according to your design
+    width: 310,
+    height: 400,
     marginBottom: 20,
   },
   container: {
@@ -32,10 +32,6 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     padding: 40, 
     zIndex: 2,
-  },
-  welcome: {
-    fontSize: 24,
-    fontWeight: 'bold',
   },
   menuButton: {
     backgroundColor: '#ffffff',
@@ -53,10 +49,9 @@ const styles = StyleSheet.create({
     fontSize: 25,
     fontWeight: 'bold',
     color: '#000000',
-	  padding: 5, 
-	  zIndex: 2,
+    padding: 5, 
+    zIndex: 2,
   },
 });
-
 
 export default WelcomeScreen;

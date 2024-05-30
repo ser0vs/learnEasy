@@ -4,18 +4,15 @@ import CustomModal from './CustomModal';
 import testsData from './tests.json';  // Adjust the path if necessary
 import { ProgressContext } from './ProgressContext';
 
-
+// TestPage component renders a test for a specific course
 const TestPage = ({ route, navigation }) => {
   const { progress, updateProgress } = useContext(ProgressContext);
   const { course } = route.params;
   const [questions, setQuestions] = useState([]);
   const [answers, setAnswers] = useState([]);
-  const { resetProgress } = useContext(ProgressContext);
   const [isModalVisible, setModalVisible] = useState(false);
   const [score, setScore] = useState(0);
   const courseProgress = progress[course.id] || { articleRead: false, videoWatched: false };
-
-  const [testTaken, setTestTaken] = useState(courseProgress.testTaken);
 
   useEffect(() => {
     const courseTest = testsData.tests.find(test => test.courseId === course.id);
@@ -25,12 +22,14 @@ const TestPage = ({ route, navigation }) => {
     }
   }, [course.id]);
 
+  // Function to handle option selection
   const handleOptionPress = (index, option) => {
     const newAnswers = [...answers];
     newAnswers[index] = option;
     setAnswers(newAnswers);
   };
 
+  // Function to handle form submission
   const handleSubmit = () => {
     let newScore = 0;
     answers.forEach((answer, index) => {
@@ -45,18 +44,20 @@ const TestPage = ({ route, navigation }) => {
     setModalVisible(true);
   };
 
+  // Function to reset the test and try again
   const handleRetry = () => {
     setAnswers(Array(questions.length).fill(null));
     setModalVisible(false);
-    updateProgress(course.id, { articleRead: false, videoWatched: false, testTaken: false });
     navigation.navigate('CourseDetails', { course });
   };
 
+  // Function to go back to the course details without retrying
   const handleGoBack = () => {
     setModalVisible(false);
     navigation.navigate('CourseDetails', { course });
   };
 
+  // Function to retake the quiz without resetting progress
   const handleRetakeQuiz = () => {
     setAnswers(Array(questions.length).fill(null));
     setModalVisible(false);
@@ -64,7 +65,6 @@ const TestPage = ({ route, navigation }) => {
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      {/* <Text style={styles.title}>Test Page</Text> */}
       {questions.map((question, index) => (
         <View key={index} style={styles.questionContainer}>
           <Text style={styles.questionText}>{question.question}</Text>
@@ -109,12 +109,6 @@ const styles = StyleSheet.create({
     padding: 20,
     backgroundColor: '#FFFFFF',
     alignItems: 'center',
-  },
-  title: {
-    fontSize: 30,
-    fontWeight: 'bold',
-    marginBottom: 20,
-    color: '#6513BD',
   },
   questionContainer: {
     marginBottom: 20,

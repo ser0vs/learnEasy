@@ -9,6 +9,7 @@ const { width, height } = Dimensions.get('window');
 // Path to the users.json file in the app's document directory
 const usersFilePath = FileSystem.documentDirectory + 'users.json';
 
+// Registration component allows users to sign up for a new account
 const Registration = ({ navigation }) => {
   const { setMyUsername } = useContext(ProgressContext);
   const [username, setUsername] = useState('');
@@ -27,7 +28,7 @@ const Registration = ({ navigation }) => {
       const fileInfo = await FileSystem.getInfoAsync(usersFilePath);
       if (!fileInfo.exists) {
         // If the file doesn't exist, create it with the initial structure
-        const initialData = { singUp: [] };
+        const initialData = { signUp: [] };
         await FileSystem.writeAsStringAsync(usersFilePath, JSON.stringify(initialData));
       }
     } catch (error) {
@@ -49,12 +50,12 @@ const Registration = ({ navigation }) => {
       const usersData = JSON.parse(fileContents);
 
       // Ensure the usersData has the correct structure
-      if (!usersData.singUp) {
-        usersData.singUp = [];
+      if (!usersData.signUp) {
+        usersData.signUp = [];
       }
 
       // Check if the email already exists
-      const emailExists = usersData.singUp.some(user => user.email === email);
+      const emailExists = usersData.signUp.some(user => user.email === email);
       if (emailExists) {
         Alert.alert('Error', 'Email already exists');
         navigation.navigate('Login'); // Navigate to the Login screen
@@ -67,7 +68,7 @@ const Registration = ({ navigation }) => {
         email,
         password,
       };
-      usersData.singUp.push(newUser);
+      usersData.signUp.push(newUser);
 
       // Save the updated users data back to the file
       await FileSystem.writeAsStringAsync(usersFilePath, JSON.stringify(usersData));

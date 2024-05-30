@@ -19,6 +19,7 @@ import CustomModal from './components/CustomModal';
 
 const Stack = createStackNavigator();
 
+// Main manager of the app pages
 const App = () => {
   return (
     <ProgressProvider>

@@ -3,8 +3,8 @@ import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-nati
 import { Ionicons } from '@expo/vector-icons';
 import Svg, { Path } from 'react-native-svg';
 import { CourseContext } from './CourseContext.js';
-import * as FileSystem from 'expo-file-system';
 
+// CourseCard component renders a single course card
 const CourseCard = ({ name, hours, description, level, onRemoveCourse, onPress }) => {
   return (
     <TouchableOpacity onPress={onPress} style={styles.courseCard}>
@@ -14,14 +14,17 @@ const CourseCard = ({ name, hours, description, level, onRemoveCourse, onPress }
       </View>
       <View style={styles.descriptionContainer}>
         <Text style={styles.courseDescription}>{description}</Text>
+        {/* Button to remove course */}
         <TouchableOpacity onPress={() => onRemoveCourse(name)}>
           <Ionicons name="remove" size={20} color="#6513BD" />
         </TouchableOpacity>
       </View>
       <View style={styles.courseFooter}>
+        {/* Display course level */}
         <Text style={[styles.courseLevel, level === 'Beginner Friendly' ? styles.beginner : styles.intermediate]}>
           {level}
         </Text>
+        {/* Display icons for different resources */}
         <View style={styles.icons}>
           <Ionicons name="book-outline" size={20} color="gray" />
           <Ionicons name="document-text-outline" size={20} color="gray" />
@@ -32,36 +35,36 @@ const CourseCard = ({ name, hours, description, level, onRemoveCourse, onPress }
   );
 };
 
+// MyCourse component displays the list of user's enrolled courses
 const MyCourse = ({ navigation }) => {
   const { myCourses, removeCourse } = useContext(CourseContext);
 
+  // Function to handle course press
   const handleCoursePress = async (courseName) => {
     try {
-        
-        const data = require('./courses.json');
-       
-        const courses = data.courses;
+      const data = require('./courses.json'); // Import course data from JSON file
+      const courses = data.courses;
 
-        if (!Array.isArray(courses)) {
-            throw new Error('courses.json does not contain an array');
-        }
+      // Check if the courses data is an array
+      if (!Array.isArray(courses)) {
+        throw new Error('courses.json does not contain an array');
+      }
 
-        const course = courses.find(course => course.title === courseName);
-
-        if (course) {
-            navigation.navigate('CourseDetails', { course });
-        } else {
-            console.error('Not found');
-        }
+      // Find the selected course and navigate to its details screen
+      const course = courses.find(course => course.title === courseName);
+      if (course) {
+        navigation.navigate('CourseDetails', { course });
+      } else {
+        console.error('Not found');
+      }
     } catch (error) {
-        console.error('Can not read courses.json:', error);
+      console.error('Can not read courses.json:', error);
     }
-};
-
-
+  };
 
   return (
     <View style={styles.container}>
+      {/* Background SVG */}
       <Svg height="50%" width="130%" style={styles.svg}>
         <Path
           d="M100,300 Q100,250 300,100 T300,100 T800,300 T1000,100 T0,90"
@@ -69,12 +72,8 @@ const MyCourse = ({ navigation }) => {
           scale="1"
         />
       </Svg>
-      {/* <View style={styles.header}>
-        <Ionicons name="arrow-back-outline" size={24} color="black" style={styles.backIcon} onPress={() => navigation.navigate('FindCourses')} /> 
-        <Text style={styles.headerText}>My Course</Text>
-        <Ionicons name="arrow-forward-outline" size={24} color="black" style={styles.forwardIcon} />
-      </View> */}
       <ScrollView contentContainerStyle={styles.courseList}>
+        {/* Render course cards */}
         {myCourses.map((course, index) => (
           <CourseCard
             key={index}
@@ -87,6 +86,7 @@ const MyCourse = ({ navigation }) => {
           />
         ))}
       </ScrollView>
+      {/* Footer Navigation */}
       <View style={styles.footer}>
         <Ionicons name="home-outline" size={24} color="gray" onPress={() => navigation.navigate('Home')} />
         <Ionicons name="search-outline" size={24} color="gray" onPress={() => navigation.navigate('FindCourses')} />
@@ -96,6 +96,7 @@ const MyCourse = ({ navigation }) => {
   );
 };
 
+// Styles for the component
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -108,6 +109,7 @@ const styles = StyleSheet.create({
     left: '50',
     zIndex: -1,
   },
+  // Header styles
   header: {
     flexDirection: 'row',
     justifyContent: 'center',
@@ -129,6 +131,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#000',
   },
+  // Course list styles
   courseList: {
     padding: 16,
   },
@@ -188,6 +191,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     width: 100,
   },
+  // Footer styles
   footer: {
     flexDirection: 'row',
     justifyContent: 'space-around',
