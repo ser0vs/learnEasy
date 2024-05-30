@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import PercentageCircle from 'react-native-percentage-circle';
 import { Ionicons } from '@expo/vector-icons';
 import { CourseContext } from './CourseContext.js';
-import { ProgressContext } from '../ProgressContext';
+import { ProgressContext } from './ProgressContext.js';
 
 
 const Home = ({ navigation }) => {
@@ -173,7 +173,7 @@ const styles = StyleSheet.create({
     paddingTop: 30,
     paddingHorizontal: 50,
     paddingBottom: 10,
-    alignItems: 'flex-start', // Left align the text
+    alignItems: 'flex-start',
   },
   containerThird: {
     width: 300, 
@@ -183,15 +183,15 @@ const styles = StyleSheet.create({
     padding: 20,
     backgroundColor: '#FFFFFF',
     zIndex: 2,
-    borderRadius: 10, // Rounded corners
-    shadowColor: '#000', // Shadow color
+    borderRadius: 10,
+    shadowColor: '#000',
     shadowOffset: {
       width: 0,
       height: 2,
     },
-    shadowOpacity: 0.25, // Shadow opacity
-    shadowRadius: 3.84, // Shadow radius
-    elevation: 5, // Android shadow
+    shadowOpacity: 0.25, 
+    shadowRadius: 3.84,
+    elevation: 5,
   },
   containerButtons: {
     flex: 1,

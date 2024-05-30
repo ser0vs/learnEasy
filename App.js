@@ -2,19 +2,19 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { CourseProvider } from './components/CourseContext';
-import { ProgressProvider } from './ProgressContext';
-import FindCourses from './components/find_courses';
-import MyCourse from './components/my_courses';
+import { ProgressProvider } from './components/ProgressContext';
+import FindCourses from './components/FindCourses';
+import MyCourse from './components/MyCourses';
 import Home from './components/Home';
 import Registration from './components/RegistrationScreaen';
 import Login from './components/Login';
-import Cours from './components/Cours';
+import Cours from './components/Cours'; 
 import Recovery from './components/Recovery';
 import WelcomeScreen from './components/WelcomeScreen';
-import CourseList from './CourseList';
-import CourseDetails from './CourseDetails';
-import TestPage from './TestPage';
-import CustomModal from './CustomModal';
+import CourseList from './components/CourseList';
+import CourseDetails from './components/CourseDetails';
+import TestPage from './components/TestPage';
+import CustomModal from './components/CustomModal';
 
 
 

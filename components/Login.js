@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Alert, Dimensions } from 'react-native';
 import Svg, { Path } from 'react-native-svg';
-import { ProgressContext } from '../ProgressContext';
+import { ProgressContext } from './ProgressContext';
 
 const { width, height } = Dimensions.get('window');
 
