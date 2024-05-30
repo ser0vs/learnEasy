@@ -26,7 +26,7 @@ const App = () => {
       <CourseProvider>
         <NavigationContainer>
           <Stack.Navigator 
-            initialRouteName="Home"
+            initialRouteName="WelcomeScreen"
             screenOptions={{
               headerTitleAlign: 'center',
               headerTitleStyle: {
