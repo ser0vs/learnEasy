@@ -18,15 +18,19 @@ const Login = ({ navigation }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
+  // Function to handle login process
   const handleLogin = () => {
+    // Check if the entered credentials are valid
     const isValidUser = validCredentials.some(
       (cred) => cred.username === username && cred.password === password
     );
 
     if (isValidUser) {
+      // Set the username in the context and navigate to the home screen
       setMyUsername(username);
       navigation.navigate('Home');
     } else {
+      // Show an alert for incorrect credentials with an option to recover
       Alert.alert(
         'Oops  :(',
         'It seems the password or login was entered incorrectly. Do you want to recover your password or login?',
@@ -38,55 +42,63 @@ const Login = ({ navigation }) => {
       );
     }
   };
+
   return (
     <View style={styles.container}>
-    <Svg height="100%" width="100%" style={styles.svg}>
+      {/* SVG Background */}
+      <Svg height="100%" width="100%" style={styles.svg}>
         <Path
           d="M0,300 Q400,250 300,100 T900,100 T800,300 T1000,100 T0,-20"
           fill="#d8b4fe"
           scale="1"
         />
       </Svg>
- 
-    <View style={styles.containerSecond}>
-      {/* Purple Background Shape */}
       
-      <Text style={styles.title}>Welcome back!</Text>
-      <Text style={styles.subtitle}>Log in</Text>
-      <View style={styles.inputGroup}>
-        <Text style={styles.label}>Username:</Text>
-        <TextInput
-          style={styles.input}
-          value={username}
-          onChangeText={setUsername}
-          placeholder="Your username"
-          autoCapitalize="none"
-        />
-      </View>
-      <View style={styles.inputGroup}>
-        <Text style={styles.label}>Password:</Text>
-        <TextInput
-          style={styles.input}
-          value={password}
-          onChangeText={setPassword}
-          placeholder="Password"
-          secureTextEntry
-        />
-      </View>
-      <TouchableOpacity onPress={() => navigation.navigate('Recovery')}>
-        <Text style={styles.forgotPasswordText}>Forgot password?</Text>
-      </TouchableOpacity>
-      <TouchableOpacity onPress={handleLogin} style={styles.loginButton}>
-        <Text style={styles.loginButtonText}>Log in</Text>
-      </TouchableOpacity>
-      
-      <View style={styles.footer}>
-        <Text style={styles.signupOptionText}>
-          Don’t have an account? <Text style={styles.signupLink} onPress={() => navigation.navigate('Registration')}>Sign up</Text>
-        </Text>
+      {/* Login Form */}
+      <View style={styles.containerSecond}>
+        <Text style={styles.title}>Welcome back!</Text>
+        <Text style={styles.subtitle}>Log in</Text>
+        {/* Username Input */}
+        <View style={styles.inputGroup}>
+          <Text style={styles.label}>Username:</Text>
+          <TextInput
+            style={styles.input}
+            value={username}
+            onChangeText={setUsername}
+            placeholder="Your username"
+            autoCapitalize="none"
+          />
+        </View>
+        {/* Password Input */}
+        <View style={styles.inputGroup}>
+          <Text style={styles.label}>Password:</Text>
+          <TextInput
+            style={styles.input}
+            value={password}
+            onChangeText={setPassword}
+            placeholder="Password"
+            secureTextEntry
+          />
+        </View>
+        {/* Forgot Password */}
+        <TouchableOpacity onPress={() => navigation.navigate('Recovery')}>
+          <Text style={styles.forgotPasswordText}>Forgot password?</Text>
+        </TouchableOpacity>
+        {/* Login Button */}
+        <TouchableOpacity onPress={handleLogin} style={styles.loginButton}>
+          <Text style={styles.loginButtonText}>Log in</Text>
+        </TouchableOpacity>
+        {/* Signup Option */}
+        <View style={styles.footer}>
+          <Text style={styles.signupOptionText}>
+            Don’t have an account?{' '}
+            <Text style={styles.signupLink} onPress={() => navigation.navigate('Registration')}>
+              Sign up
+            </Text>
+          </Text>
+        </View>
       </View>
     </View>
-  </View>
   );
 };
 
@@ -111,7 +123,6 @@ const styles = StyleSheet.create({
     padding: 0, 
     zIndex: 1,
   },
-  
   title: {
     fontSize: 30,
     fontWeight: 'bold',
@@ -152,10 +163,6 @@ const styles = StyleSheet.create({
     shadowRadius: 3.84,
     elevation: 5,
   },
-  forgotPassword: {
-    marginBottom: 10,
-    alignItems: 'center',
-  },
   forgotPasswordText: {
     fontSize: 16,
     marginBottom: 20,
@@ -174,10 +181,9 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
     color: '#000000',
-	  padding: 5, 
-	  zIndex: 2,
+    padding: 5, 
+    zIndex: 2,
   },
-  
   footer: {
     alignItems: 'center',
     paddingBottom: 20,

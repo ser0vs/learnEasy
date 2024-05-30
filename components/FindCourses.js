@@ -8,6 +8,7 @@ import { CourseContext } from './CourseContext';
 const courseData = require('./courses.json');
 const { width, height } = Dimensions.get('window');
 
+// Component for finding and displaying courses
 const FindCourses = () => {
   const [courses, setCourses] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
@@ -18,10 +19,12 @@ const FindCourses = () => {
     setCourses(courseData.courses);
   }, []);
 
+  // Filter courses based on search query
   const filteredCourses = courses.filter(course =>
     course.title.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
+  // Component for displaying each course card
   const CourseCard = ({ title, duration, description, section, course }) => {
     return (
       <TouchableOpacity onPress={() => navigation.navigate('CourseDetails', { course })}>
@@ -65,11 +68,6 @@ const FindCourses = () => {
           scale="1"
         />
       </Svg>
-      {/* <View style={styles.header}>
-        <Ionicons name="arrow-back-outline" size={24} color="black" style={styles.backIcon} onPress={() => navigation.navigate('Home')} />
-        <Text style={styles.headerText}>Find new courses</Text>
-        <Ionicons name="arrow-forward-outline" size={24} color="black" style={styles.forwardIcon} onPress={() => navigation.navigate('MyCourse')} />
-      </View> */}
       <TextInput
         style={styles.searchInput}
         placeholder="Search for courses"
@@ -98,6 +96,7 @@ const FindCourses = () => {
   );
 };
 
+// Styles for the component
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -109,27 +108,6 @@ const styles = StyleSheet.create({
     top: 150,
     left: '50',
     zIndex: -1,
-  },
-  header: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: 16,
-    backgroundColor: '#FFFFFF',
-    position: 'relative',
-  },
-  forwardIcon: {
-    position: 'absolute',
-    right: 16,
-  },
-  backIcon: {
-    position: 'absolute',
-    left: 16,
-  },
-  headerText: {
-    fontSize: 20,
-    fontWeight: 'bold',
-    color: '#000',
   },
   searchInput: {
     height: 40,

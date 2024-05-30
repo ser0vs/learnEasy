@@ -3,10 +3,12 @@ import { View, Text, TouchableOpacity, StyleSheet, ScrollView, Image } from 'rea
 import { useNavigation } from '@react-navigation/native';
 import coursesData from './courses.json';  // Adjust the path if necessary
 
+// Component for displaying a list of courses
 const CourseList = () => {
   const navigation = useNavigation();
   const courses = coursesData.courses;  // Access courses from the imported JSON
 
+  // Check if courses is an array
   if (!Array.isArray(courses)) {
     console.error("Expected an array of courses");
     return null;
@@ -14,18 +16,20 @@ const CourseList = () => {
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
+      {/* Map over the courses and display them */}
       {courses.map((course) => (
         <TouchableOpacity
           key={course.id}
           style={styles.courseContainer}
           onPress={() => navigation.navigate('CourseDetails', { course })}
         >
-          
+          {/* Display course information */}
           <View style={styles.courseInfo}>
             <Text style={styles.courseTitle}>{course.title}</Text>
             <Text style={styles.courseSection}>{course.section}</Text>
             <Text style={styles.courseDuration}>{course.duration}</Text>
           </View>
+          {/* Display course image */}
           <Image source={{ uri: course.image }} style={styles.courseImage} />
         </TouchableOpacity>
       ))}
@@ -33,6 +37,7 @@ const CourseList = () => {
   );
 };
 
+// Styles for the component
 const styles = StyleSheet.create({
   container: {
     padding: 20,

@@ -6,6 +6,7 @@ import { ProgressContext } from './ProgressContext';
 
 const { width } = Dimensions.get('window');
 
+// Component for displaying course details (main screen of the course)
 const CourseDetails = ({ route, navigation }) => {
   const { course } = route.params;
   const { progress, setProgress } = useContext(ProgressContext);
@@ -15,6 +16,7 @@ const CourseDetails = ({ route, navigation }) => {
   const [articleRead, setArticleRead] = useState(courseProgress.articleRead);
   const [videoWatched, setVideoWatched] = useState(courseProgress.videoWatched);
 
+  // Update progress when articleRead or videoWatched changes
   useEffect(() => {
     setProgress((prevProgress) => ({
       ...prevProgress,
@@ -22,10 +24,12 @@ const CourseDetails = ({ route, navigation }) => {
     }));
   }, [articleRead, videoWatched]);
 
+  // Function to open URL in a browser
   const openURL = (url) => {
     Linking.openURL(url).catch((err) => console.error("Couldn't load page", err));
   };
 
+  // Function to mark section as complete
   const markSectionComplete = (section) => {
     if (section === 'articleRead') {
       setArticleRead(true);
@@ -36,6 +40,7 @@ const CourseDetails = ({ route, navigation }) => {
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
+      {/* SVG background */}
       <Svg height="100%" width="100%" style={styles.svg}>
         <Path
           d="M0,300 Q400,250 300,100 T900,100 T800,300 T1000,100 T0,-20"
@@ -43,6 +48,7 @@ const CourseDetails = ({ route, navigation }) => {
           scale="1"
         />
       </Svg>
+
       <View style={styles.containerSecond}>
         <Text style={styles.title}>{course.title}</Text>
         <Text style={styles.section}>{course.section}</Text>
@@ -53,6 +59,7 @@ const CourseDetails = ({ route, navigation }) => {
         />
         <Text style={styles.description}>{course.description}</Text>
         
+        {/* Display course events */}
         {course.events.map((event, index) => (
           <View key={index} style={styles.eventContainer}>
             <Text style={styles.eventTitle}>{event.title}</Text>
@@ -60,6 +67,7 @@ const CourseDetails = ({ route, navigation }) => {
           </View>
         ))}
 
+        {/* Button to mark article as read */}
         <TouchableOpacity
           style={articleRead ? styles.completedButton : styles.progressButton}
           onPress={() => markSectionComplete('articleRead')}
@@ -69,6 +77,7 @@ const CourseDetails = ({ route, navigation }) => {
           </Text>
         </TouchableOpacity>
 
+        {/* Embedded video */}
         <WebView
           style={styles.video}
           javaScriptEnabled={true}
@@ -76,6 +85,7 @@ const CourseDetails = ({ route, navigation }) => {
           source={{ uri: course.video }}
         />
         
+        {/* Button to mark video as watched */}
         <TouchableOpacity
           style={videoWatched ? styles.completedButton : styles.progressButton}
           onPress={() => markSectionComplete('videoWatched')}
@@ -85,6 +95,7 @@ const CourseDetails = ({ route, navigation }) => {
           </Text>
         </TouchableOpacity>
 
+        {/* Additional resources */}
         <View style={styles.linkSection}>
           <Text style={styles.additionalText}>You might find these additional resources interesting:</Text>
           {course.resources.map((resource, index) => (
@@ -93,6 +104,8 @@ const CourseDetails = ({ route, navigation }) => {
             </TouchableOpacity>
           ))}
         </View>
+
+        {/* Button to navigate to the test page */}
         <TouchableOpacity
           onPress={() => {
             if (articleRead && videoWatched) {
@@ -118,6 +131,7 @@ const CourseDetails = ({ route, navigation }) => {
   );
 };
 
+// Styles for the component
 const styles = StyleSheet.create({
   svg: {
     position: 'absolute',

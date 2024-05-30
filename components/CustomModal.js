@@ -1,6 +1,7 @@
 import React from 'react';
 import { Modal, View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 
+// Custom modal component to display quiz results
 const CustomModal = ({ visible, score, totalQuestions, onRetry, onGoBack, onRetakeQuiz }) => {
   return (
     <Modal
@@ -12,6 +13,7 @@ const CustomModal = ({ visible, score, totalQuestions, onRetry, onGoBack, onReta
       <View style={styles.modalContainer}>
         <View style={styles.modalContent}>
           <Text style={styles.modalTitle}>Results</Text>
+          {/* Determine message based on score */}
           <Text style={styles.modalMessage}>
             {score <= 5 
               ? `You scored ${score} out of ${totalQuestions} 😔. Maybe you want to take the course again?`
@@ -19,6 +21,7 @@ const CustomModal = ({ visible, score, totalQuestions, onRetry, onGoBack, onReta
               ? `You scored ${score} out of ${totalQuestions} 😊.`
               : `Well done 🎉! You scored ${score} out of ${totalQuestions}.`}
           </Text>
+          {/* Display different buttons based on score */}
           <View style={styles.buttonContainer}>
             {score <= 5 && (
               <TouchableOpacity onPress={onRetry} style={styles.modalButton}>
@@ -40,6 +43,7 @@ const CustomModal = ({ visible, score, totalQuestions, onRetry, onGoBack, onReta
   );
 };
 
+// Styles for the modal
 const styles = StyleSheet.create({
   modalContainer: {
     flex: 1,
