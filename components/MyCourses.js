@@ -15,7 +15,7 @@ const CourseCard = ({ name, hours, description, level, onRemoveCourse, onPress }
       <View style={styles.descriptionContainer}>
         <Text style={styles.courseDescription}>{description}</Text>
         <TouchableOpacity onPress={() => onRemoveCourse(name)}>
-          <Ionicons name="remove-outline" size={20} color="gray" />
+          <Ionicons name="remove" size={20} color="#6513BD" />
         </TouchableOpacity>
       </View>
       <View style={styles.courseFooter}>
@@ -24,7 +24,7 @@ const CourseCard = ({ name, hours, description, level, onRemoveCourse, onPress }
         </Text>
         <View style={styles.icons}>
           <Ionicons name="book-outline" size={20} color="gray" />
-          <Ionicons name="headset-outline" size={20} color="gray" />
+          <Ionicons name="document-text-outline" size={20} color="gray" />
           <Ionicons name="videocam-outline" size={20} color="gray" />
         </View>
       </View>

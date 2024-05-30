@@ -38,9 +38,9 @@ const FindCourses = () => {
           <View style={styles.descriptionContainer}>
             <Text style={styles.courseDescription}>{description}</Text>
             <Ionicons
-              name="add-outline"
+              name="add"
               size={20}
-              color="gray"
+              color="#6513BD"
               onPress={() => addCourse({ name: title, hours: duration, description, level: section })}
             />
           </View>
@@ -50,7 +50,7 @@ const FindCourses = () => {
             </Text>
             <View style={styles.icons}>
               <Ionicons name="book-outline" size={20} color="gray" />
-              <Ionicons name="headset-outline" size={20} color="gray" />
+              <Ionicons name="document-text-outline" size={20} color="gray" />
               <Ionicons name="videocam-outline" size={20} color="gray" />
             </View>
           </View>
