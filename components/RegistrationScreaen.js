@@ -2,7 +2,6 @@ import React, { useContext, useState, useEffect } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Alert, Dimensions } from 'react-native';
 import Svg, { Path } from 'react-native-svg';
 import * as FileSystem from 'expo-file-system';
-import { Asset } from 'expo-asset';
 import { ProgressContext } from '../ProgressContext';
 
 const { width, height } = Dimensions.get('window');
@@ -27,13 +26,9 @@ const Registration = ({ navigation }) => {
     try {
       const fileInfo = await FileSystem.getInfoAsync(usersFilePath);
       if (!fileInfo.exists) {
-        // If the file doesn't exist, download it from the assets and copy it to the document directory
-        const asset = Asset.fromModule(require('./users.json'));
-        await asset.downloadAsync();
-        await FileSystem.copyAsync({
-          from: asset.localUri,
-          to: usersFilePath,
-        });
+        // If the file doesn't exist, create it with the initial structure
+        const initialData = { singUp: [] };
+        await FileSystem.writeAsStringAsync(usersFilePath, JSON.stringify(initialData));
       }
     } catch (error) {
       console.log('Error initializing users file:', error);
@@ -53,8 +48,13 @@ const Registration = ({ navigation }) => {
       const fileContents = await FileSystem.readAsStringAsync(usersFilePath);
       const usersData = JSON.parse(fileContents);
 
+      // Ensure the usersData has the correct structure
+      if (!usersData.singUp) {
+        usersData.singUp = [];
+      }
+
       // Check if the email already exists
-      const emailExists = usersData.some(user => user.email === email);
+      const emailExists = usersData.singUp.some(user => user.email === email);
       if (emailExists) {
         Alert.alert('Error', 'Email already exists');
         navigation.navigate('Login'); // Navigate to the Login screen
@@ -63,11 +63,11 @@ const Registration = ({ navigation }) => {
 
       // Add the new user to the users data
       const newUser = {
-        username,
+        name: username,
         email,
         password,
       };
-      usersData.push(newUser);
+      usersData.singUp.push(newUser);
 
       // Save the updated users data back to the file
       await FileSystem.writeAsStringAsync(usersFilePath, JSON.stringify(usersData));
