@@ -52,6 +52,31 @@
 			"question": "Who initiated the Reformation that challenged the Habsburgs?",
 			"options": ["John Calvin", "Martin Luther", "Henry VIII", "Ulrich Zwingli"],
 			"correctAnswer": "Martin Luther"
+		  },
+		  {
+			"question": "Who was the first Habsburg ruler to become Emperor of the Holy Roman Empire?",
+			"options": ["Maximilian I", "Rudolf I", "Charles V", "Ferdinand I"],
+			"correctAnswer": "Rudolf I"
+		  },
+		  {
+			"question": "Which Habsburg ruler famously fought against the Ottoman Empire?",
+			"options": ["Charles V", "Maximilian I", "Leopold I", "Ferdinand II"],
+			"correctAnswer": "Leopold I"
+		  },
+		  {
+			"question": "What was the Pragmatic Sanction of 1713?",
+			"options": ["A treaty with the Ottomans", "A decree allowing Maria Theresa to rule", "An agreement with France", "A religious reformation document"],
+			"correctAnswer": "A decree allowing Maria Theresa to rule"
+		  },
+		  {
+			"question": "Which Habsburg ruler abdicated in favor of his brother Ferdinand I?",
+			"options": ["Charles V", "Rudolf II", "Leopold II", "Francis II"],
+			"correctAnswer": "Charles V"
+		  },
+		  {
+			"question": "What was the main reason for the War of Austrian Succession?",
+			"options": ["Territorial disputes", "Maria Theresa's right to the throne", "Religious conflicts", "Economic issues"],
+			"correctAnswer": "Maria Theresa's right to the throne"
 		  }
 		]
 	  },
@@ -107,6 +132,31 @@
 			"question": "What happens when Juliet awakens and finds Romeo dead?",
 			"options": ["She runs away", "She takes her own life", "She marries Paris", "She confronts her family"],
 			"correctAnswer": "She takes her own life"
+		  },
+		  {
+			"question": "Who is Romeo in love with before he meets Juliet?",
+			"options": ["Rosaline", "Beatrice", "Ophelia", "Cleopatra"],
+			"correctAnswer": "Rosaline"
+		  },
+		  {
+			"question": "Which character provides comic relief in Romeo and Juliet?",
+			"options": ["The Nurse", "Friar Laurence", "Mercutio", "Benvolio"],
+			"correctAnswer": "The Nurse"
+		  },
+		  {
+			"question": "Who kills Mercutio?",
+			"options": ["Tybalt", "Romeo", "Paris", "The Prince"],
+			"correctAnswer": "Tybalt"
+		  },
+		  {
+			"question": "What is the final message Friar Laurence sends to Romeo?",
+			"options": ["To meet Juliet in the tomb", "To return to Verona", "To flee to Mantua", "To confess to the Prince"],
+			"correctAnswer": "To meet Juliet in the tomb"
+		  },
+		  {
+			"question": "Which character tries to prevent the fight between Tybalt and Mercutio?",
+			"options": ["Benvolio", "Romeo", "Paris", "The Nurse"],
+			"correctAnswer": "Benvolio"
 		  }
 		]
 	  },
@@ -162,173 +212,594 @@
 			"question": "What nationality was Antonio Vivaldi?",
 			"options": ["German", "Italian", "French", "Austrian"],
 			"correctAnswer": "Italian"
-		}
+		  },
+		  {
+			"question": "Which musical period does Vivaldi belong to?",
+			"options": ["Baroque", "Classical", "Romantic", "Modern"],
+			"correctAnswer": "Baroque"
+		  },
+		  {
+			"question": "What other name is Vivaldi known by?",
+			"options": ["The Red Priest", "The Blue Composer", "The Great Maestro", "The Golden Violinist"],
+			"correctAnswer": "The Red Priest"
+		  },
+		  {
+			"question": "Which instrument did Vivaldi play?",
+			"options": ["Piano", "Violin", "Flute", "Harpsichord"],
+			"correctAnswer": "Violin"
+		  },
+		  {
+			"question": "In which city did Vivaldi spend most of his career?",
+			"options": ["Rome", "Florence", "Venice", "Milan"],
+			"correctAnswer": "Venice"
+		  },
+		  {
+			"question": "What inspired Vivaldi to write The Four Seasons?",
+			"options": ["Nature and landscapes", "Historical events", "Mythology", "Literary works"],
+			"correctAnswer": "Nature and landscapes"
+		  }
+		]
+	  },
+	  {
+		"courseId": 4,
+		"questions": [
+		  {
+			"question": "Which river is commonly regarded as the longest river in the world?",
+			"options": ["Amazon", "Yangtze", "Mississippi", "Nile"],
+			"correctAnswer": "Nile"
+		  },
+		  {
+			"question": "How long is the Nile River?",
+			"options": ["4,130 miles", "3,976 miles", "2,345 miles", "1,234 miles"],
+			"correctAnswer": "4,130 miles"
+		  },
+		  {
+			"question": "How many countries does the Nile River flow through?",
+			"options": ["Five", "Seven", "Eleven", "Thirteen"],
+			"correctAnswer": "Eleven"
+		  },
+		  {
+			"question": "Which of these countries is NOT part of the Nile River basin?",
+			"options": ["Tanzania", "Uganda", "Brazil", "Egypt"],
+			"correctAnswer": "Brazil"
+		  },
+		  {
+			"question": "What is the significance of the Nile Delta?",
+			"options": ["It is a major desert", "It is a rich agricultural region", "It is a mountain range", "It is an island"],
+			"correctAnswer": "It is a rich agricultural region"
+		  },
+		  {
+			"question": "Which ancient civilization was primarily based around the Nile River?",
+			"options": ["Mesopotamia", "Indus Valley", "Ancient Egypt", "Maya"],
+			"correctAnswer": "Ancient Egypt"
+		  },
+		  {
+			"question": "What did the Aswan High Dam create?",
+			"options": ["Lake Victoria", "Lake Tanganyika", "Lake Nasser", "Lake Chad"],
+			"correctAnswer": "Lake Nasser"
+		  },
+		  {
+			"question": "When was the Aswan High Dam completed?",
+			"options": ["1950", "1965", "1970", "1985"],
+			"correctAnswer": "1970"
+		  },
+		  {
+			"question": "What type of geographical feature is the Nile Delta?",
+			"options": ["A mountain range", "A desert", "A river delta", "A peninsula"],
+			"correctAnswer": "A river delta"
+		  },
+		  {
+			"question": "How has the Nile River impacted agriculture in Egypt?",
+			"options": ["It has no impact", "It provides fertile land", "It creates deserts", "It reduces crop yield"],
+			"correctAnswer": "It provides fertile land"
+		  },
+		  {
+			"question": "What is the source of the White Nile?",
+			"options": ["Lake Tana", "Lake Victoria", "Lake Chad", "Lake Tanganyika"],
+			"correctAnswer": "Lake Victoria"
+		  },
+		  {
+			"question": "Which lake is the source of the Blue Nile?",
+			"options": ["Lake Tana", "Lake Victoria", "Lake Chad", "Lake Tanganyika"],
+			"correctAnswer": "Lake Tana"
+		  },
+		  {
+			"question": "What is the annual flooding of the Nile called?",
+			"options": ["The Inundation", "The Deluge", "The Monsoon", "The Overflow"],
+			"correctAnswer": "The Inundation"
+		  },
+		  {
+			"question": "Which ancient structure was built using stones transported via the Nile?",
+			"options": ["The Pyramids", "The Parthenon", "The Colosseum", "The Great Wall"],
+			"correctAnswer": "The Pyramids"
+		  },
+		  {
+			"question": "What was the main purpose of the Aswan High Dam?",
+			"options": ["To generate hydroelectric power", "To control flooding", "To provide irrigation", "All of the above"],
+			"correctAnswer": "All of the above"
+		  }
+		]
+	  },
+	  {
+		"courseId": 5,
+		"questions": [
+		  {
+			"question": "Which form of government was developed in Athens during the 5th century BC?",
+			"options": ["Monarchy", "Oligarchy", "Democracy", "Dictatorship"],
+			"correctAnswer": "Democracy"
+		  },
+		  {
+			"question": "What were the Persian Wars?",
+			"options": ["A series of conflicts between Greece and the Persian Empire", "A civil war in Greece", "A war between Rome and Persia", "A trade war between Greece and Persia"],
+			"correctAnswer": "A series of conflicts between Greece and the Persian Empire"
+		  },
+		  {
+			"question": "Which period followed the Persian Wars and saw a cultural and political flowering in Athens?",
+			"options": ["The Dark Ages", "The Golden Age", "The Hellenistic Period", "The Roman Period"],
+			"correctAnswer": "The Golden Age"
+		  },
+		  {
+			"question": "Who fought in the Peloponnesian War?",
+			"options": ["Athens and Sparta", "Rome and Carthage", "Persia and Egypt", "Athens and Thebes"],
+			"correctAnswer": "Athens and Sparta"
+		  },
+		  {
+			"question": "Who was Alexander the Great?",
+			"options": ["A philosopher", "A playwright", "A conqueror", "A poet"],
+			"correctAnswer": "A conqueror"
+		  },
+		  {
+			"question": "What was the Hellenistic Period?",
+			"options": ["The period following the death of Alexander the Great", "The early period of Greek history", "The period of Greek colonization", "The time of the Persian Wars"],
+			"correctAnswer": "The period following the death of Alexander the Great"
+		  },
+		  {
+			"question": "Which famous structure was built during the Golden Age of Athens?",
+			"options": ["The Colosseum", "The Parthenon", "The Pyramids", "The Great Wall"],
+			"correctAnswer": "The Parthenon"
+		  },
+		  {
+			"question": "Which battle was a key conflict during the Persian Wars?",
+			"options": ["Battle of Thermopylae", "Battle of Actium", "Battle of Tours", "Battle of Hastings"],
+			"correctAnswer": "Battle of Thermopylae"
+		  },
+		  {
+			"question": "What city was the center of Greek learning and culture during the Hellenistic Period?",
+			"options": ["Athens", "Alexandria", "Sparta", "Thebes"],
+			"correctAnswer": "Alexandria"
+		  },
+		  {
+			"question": "Which philosopher taught Alexander the Great?",
+			"options": ["Socrates", "Plato", "Aristotle", "Epicurus"],
+			"correctAnswer": "Aristotle"
+		  },
+		  {
+			"question": "Who was the leader of Athens during its Golden Age?",
+			"options": ["Pericles", "Leonidas", "Solon", "Draco"],
+			"correctAnswer": "Pericles"
+		  },
+		  {
+			"question": "Which philosopher founded the Academy in Athens?",
+			"options": ["Socrates", "Plato", "Aristotle", "Pythagoras"],
+			"correctAnswer": "Plato"
+		  },
+		  {
+			"question": "What was the primary focus of Greek philosophy during the Classical Period?",
+			"options": ["Mythology", "Science", "Ethics and politics", "Art and literature"],
+			"correctAnswer": "Ethics and politics"
+		  },
+		  {
+			"question": "Which Greek historian is known as the 'Father of History'?",
+			"options": ["Thucydides", "Herodotus", "Xenophon", "Plutarch"],
+			"correctAnswer": "Herodotus"
+		  },
+		  {
+			"question": "What is the significance of the Delian League?",
+			"options": ["An alliance led by Sparta", "An alliance led by Athens", "A religious festival", "A philosophical school"],
+			"correctAnswer": "An alliance led by Athens"
+		  }
+		]
+	  },
+	  {
+		"courseId": 6,
+		"questions": [
+		  {
+			"question": "Where was Vincent van Gogh born?",
+			"options": ["France", "Netherlands", "Germany", "Belgium"],
+			"correctAnswer": "Netherlands"
+		  },
+		  {
+			"question": "In which city did van Gogh become influenced by the Impressionists?",
+			"options": ["Paris", "London", "Amsterdam", "Berlin"],
+			"correctAnswer": "Paris"
+		  },
+		  {
+			"question": "What is the title of the famous series of paintings van Gogh created featuring sunflowers?",
+			"options": ["Sunflowers", "Irises", "Wheatfields", "Starry Night"],
+			"correctAnswer": "Sunflowers"
+		  },
+		  {
+			"question": "Which mental health issue did van Gogh struggle with?",
+			"options": ["Depression", "Anxiety", "Schizophrenia", "Bipolar Disorder"],
+			"correctAnswer": "Depression"
+		  },
+		  {
+			"question": "In which city did van Gogh paint 'Starry Night'?",
+			"options": ["Arles", "Saint-Rémy-de-Provence", "Paris", "Auvers-sur-Oise"],
+			"correctAnswer": "Saint-Rémy-de-Provence"
+		  },
+		  {
+			"question": "What year did Vincent van Gogh die?",
+			"options": ["1880", "1890", "1900", "1910"],
+			"correctAnswer": "1890"
+		  },
+		  {
+			"question": "What was the relationship between van Gogh and Theo?",
+			"options": ["Friends", "Brothers", "Cousins", "Colleagues"],
+			"correctAnswer": "Brothers"
+		  },
+		  {
+			"question": "Which painting is considered one of van Gogh's most famous works?",
+			"options": ["The Scream", "The Persistence of Memory", "Mona Lisa", "Starry Night"],
+			"correctAnswer": "Starry Night"
+		  },
+		  {
+			"question": "Where is the Van Gogh Museum located?",
+			"options": ["Paris", "London", "Amsterdam", "Berlin"],
+			"correctAnswer": "Amsterdam"
+		  },
+		  {
+			"question": "Which artistic movement is van Gogh most associated with?",
+			"options": ["Impressionism", "Post-Impressionism", "Cubism", "Surrealism"],
+			"correctAnswer": "Post-Impressionism"
+		  },
+		  {
+			"question": "What was the title of van Gogh's painting of his bedroom?",
+			"options": ["Bedroom in Arles", "The Yellow House", "The Red Room", "The Studio"],
+			"correctAnswer": "Bedroom in Arles"
+		  },
+		  {
+			"question": "Which painting depicts van Gogh's view from his asylum room?",
+			"options": ["Wheatfield with Crows", "Starry Night", "Irises", "The Night Café"],
+			"correctAnswer": "Starry Night"
+		  },
+		  {
+			"question": "How many self-portraits did van Gogh paint?",
+			"options": ["Around 10", "Around 20", "Around 30", "Around 40"],
+			"correctAnswer": "Around 30"
+		  },
+		  {
+			"question": "Which painting features a café terrace at night?",
+			"options": ["The Night Café", "Café Terrace at Night", "The Starry Night", "The Café in Paris"],
+			"correctAnswer": "Café Terrace at Night"
+		  },
+		  {
+			"question": "What did van Gogh famously cut off?",
+			"options": ["His finger", "His ear", "His hand", "His foot"],
+			"correctAnswer": "His ear"
+		  }
+		]
+	  },
+	  {
+		"courseId": 7,
+		"questions": [
+		  {
+			"question": "When and where was Claude Monet born?",
+			"options": ["Paris, 1840", "Le Havre, 1840", "Paris, 1850", "Giverny, 1840"],
+			"correctAnswer": "Paris, 1840"
+		  },
+		  {
+			"question": "Which painting gave the Impressionist movement its name?",
+			"options": ["Water Lilies", "Rouen Cathedral", "Impression, Sunrise", "Haystacks"],
+			"correctAnswer": "Impression, Sunrise"
+		  },
+		  {
+			"question": "Where did Monet create his famous garden and water lily pond?",
+			"options": ["Paris", "Le Havre", "Giverny", "Rouen"],
+			"correctAnswer": "Giverny"
+		  },
+		  {
+			"question": "Which art style greatly influenced Monet's work?",
+			"options": ["Cubism", "Japanese Art", "Baroque", "Surrealism"],
+			"correctAnswer": "Japanese Art"
+		  },
+		  {
+			"question": "What did Monet's series of paintings like 'Haystacks' and 'Rouen Cathedral' demonstrate?",
+			"options": ["His fascination with rural life", "The effects of light and time on a single subject", "Urban scenes", "His interest in human figures"],
+			"correctAnswer": "The effects of light and time on a single subject"
+		  },
+		  {
+			"question": "What was the main subject of Monet's late works?",
+			"options": ["Portraits", "Historical events", "His garden and water lilies", "Cityscapes"],
+			"correctAnswer": "His garden and water lilies"
+		  },
+		  {
+			"question": "Which physical ailment did Monet suffer from in his later years?",
+			"options": ["Arthritis", "Blindness", "Cataracts", "Deafness"],
+			"correctAnswer": "Cataracts"
+		  },
+		  {
+			"question": "Which city did Monet move to in 1859 to pursue his artistic career?",
+			"options": ["Giverny", "Paris", "Le Havre", "London"],
+			"correctAnswer": "Paris"
+		  },
+		  {
+			"question": "Which of these artists was NOT a contemporary and friend of Monet?",
+			"options": ["Pierre-Auguste Renoir", "Édouard Manet", "Camille Pissarro", "Pablo Picasso"],
+			"correctAnswer": "Pablo Picasso"
+		  },
+		  {
+			"question": "What impact did Monet have on modern art?",
+			"options": ["Minimal", "Moderate", "Significant", "None"],
+			"correctAnswer": "Significant"
+		  },
+		  {
+			"question": "What was Monet's first exhibited work?",
+			"options": ["The Beach at Honfleur", "The Magpie", "Impression, Sunrise", "Women in the Garden"],
+			"correctAnswer": "The Beach at Honfleur"
+		  },
+		  {
+			"question": "Which subject did Monet frequently paint in the 1870s?",
+			"options": ["Boats", "Flowers", "Buildings", "People"],
+			"correctAnswer": "Boats"
+		  },
+		  {
+			"question": "Which painting depicts Monet's wife and their son on a walk?",
+			"options": ["Woman with a Parasol", "Woman in a Garden", "Camille Monet on a Garden Bench", "On the Bank of the Seine"],
+			"correctAnswer": "Woman with a Parasol"
+		  },
+		  {
+			"question": "What is the title of Monet's painting that features a Japanese bridge?",
+			"options": ["The Bridge at Argenteuil", "The Water Lily Pond", "The Japanese Bridge", "The Bridge at Giverny"],
+			"correctAnswer": "The Water Lily Pond"
+		  },
+		  {
+			"question": "In which artistic movement did Monet play a significant role?",
+			"options": ["Impressionism", "Cubism", "Surrealism", "Realism"],
+			"correctAnswer": "Impressionism"
+		  }
+		]
+	  },
+	  {
+		"courseId": 8,
+		"questions": [
+		  {
+			"question": "Where was Ludwig van Beethoven born?",
+			"options": ["Vienna", "Bonn", "Salzburg", "Berlin"],
+			"correctAnswer": "Bonn"
+		  },
+		  {
+			"question": "Who was Beethoven's first music teacher?",
+			"options": ["Joseph Haydn", "Johann van Beethoven", "Wolfgang Amadeus Mozart", "Antonio Salieri"],
+			"correctAnswer": "Johann van Beethoven"
+		  },
+		  {
+			"question": "Which period of Beethoven's career is known as the 'Heroic Period'?",
+			"options": ["Early Years", "Middle Years", "Late Years", "Final Years"],
+			"correctAnswer": "Middle Years"
+		  },
+		  {
+			"question": "What significant challenge did Beethoven face in his later years?",
+			"options": ["Blindness", "Deafness", "Financial difficulties", "Exile"],
+			"correctAnswer": "Deafness"
+		  },
+		  {
+			"question": "Which symphony is known for its 'Ode to Joy'?",
+			"options": ["Fifth Symphony", "Sixth Symphony", "Ninth Symphony", "Third Symphony"],
+			"correctAnswer": "Ninth Symphony"
+		  },
+		  {
+			"question": "In which city did Beethoven spend most of his career?",
+			"options": ["Vienna", "Bonn", "Berlin", "Prague"],
+			"correctAnswer": "Vienna"
+		  },
+		  {
+			"question": "What is the title of Beethoven's famous piano sonata that includes the 'Moonlight Sonata'?",
+			"options": ["Sonata No. 8", "Sonata No. 14", "Sonata No. 23", "Sonata No. 26"],
+			"correctAnswer": "Sonata No. 14"
+		  },
+		  {
+			"question": "Which composition marks Beethoven's shift to his 'Late Period'?",
+			"options": ["Eroica Symphony", "Missa Solemnis", "Pathétique Sonata", "Violin Concerto"],
+			"correctAnswer": "Missa Solemnis"
+		  },
+		  {
+			"question": "Which famous composer did Beethoven study with after moving to Vienna?",
+			"options": ["Mozart", "Schubert", "Haydn", "Brahms"],
+			"correctAnswer": "Haydn"
+		  },
+		  {
+			"question": "What year was Beethoven born?",
+			"options": ["1765", "1770", "1780", "1790"],
+			"correctAnswer": "1770"
+		  },
+		  {
+			"question": "What was Beethoven's father's profession?",
+			"options": ["Musician", "Doctor", "Teacher", "Merchant"],
+			"correctAnswer": "Musician"
+		  },
+		  {
+			"question": "Which of Beethoven's works is considered a turning point in his compositional style?",
+			"options": ["Third Symphony", "Fifth Symphony", "Ninth Symphony", "Moonlight Sonata"],
+			"correctAnswer": "Third Symphony"
+		  },
+		  {
+			"question": "What was the original title of Beethoven's Third Symphony?",
+			"options": ["Eroica", "Bonaparte", "Pastoral", "Choral"],
+			"correctAnswer": "Bonaparte"
+		  },
+		  {
+			"question": "Which Beethoven symphony is often called the 'Pastoral Symphony'?",
+			"options": ["Fourth Symphony", "Fifth Symphony", "Sixth Symphony", "Seventh Symphony"],
+			"correctAnswer": "Sixth Symphony"
+		  },
+		  {
+			"question": "How did Beethoven's hearing loss affect his music?",
+			"options": ["He stopped composing", "He composed less frequently", "His compositions became more innovative", "He switched to painting"],
+			"correctAnswer": "His compositions became more innovative"
+		  }
+		]
+	  },
+	  {
+		"courseId": 9,
+		"questions": [
+		  {
+			"question": "Who guides Dante through Hell?",
+			"options": ["Virgil", "Beatrice", "Charon", "Minos"],
+			"correctAnswer": "Virgil"
+		  },
+		  {
+			"question": "How many circles of Hell are described in Inferno?",
+			"options": ["Seven", "Nine", "Ten", "Three"],
+			"correctAnswer": "Nine"
+		  },
+		  {
+			"question": "Who is Dante's guide through Heaven?",
+			"options": ["Virgil", "St. Peter", "Beatrice", "St. Bernard"],
+			"correctAnswer": "Beatrice"
+		  },
+		  {
+			"question": "Which section of The Divine Comedy describes the purification of souls?",
+			"options": ["Inferno", "Purgatorio", "Paradiso", "None"],
+			"correctAnswer": "Purgatorio"
+		  },
+		  {
+			"question": "What is the final destination Dante reaches in The Divine Comedy?",
+			"options": ["Hell", "Earthly Paradise", "The Divine Presence", "The First Circle of Heaven"],
+			"correctAnswer": "The Divine Presence"
+		  },
+		  {
+			"question": "What is the significance of the number three in The Divine Comedy?",
+			"options": ["It represents the Holy Trinity", "It represents Dante's three journeys", "It is the number of lines in each stanza", "All of the above"],
+			"correctAnswer": "All of the above"
+		  },
+		  {
+			"question": "Which historical figure does Dante encounter in the first circle of Hell?",
+			"options": ["Julius Caesar", "Cleopatra", "Homer", "Aristotle"],
+			"correctAnswer": "Homer"
+		  },
+		  {
+			"question": "What allegorical concept is represented by the structure of Hell in Inferno?",
+			"options": ["The progression of sin", "The stages of grief", "The hierarchy of the church", "The journey of the soul"],
+			"correctAnswer": "The progression of sin"
+		  },
+		  {
+			"question": "Which famous couple is found in the second circle of Hell?",
+			"options": ["Paolo and Francesca", "Helen and Paris", "Antony and Cleopatra", "Romeo and Juliet"],
+			"correctAnswer": "Paolo and Francesca"
+		  },
+		  {
+			"question": "In Paradiso, who crowns Dante with laurels as a sign of his poetic accomplishment?",
+			"options": ["Virgil", "St. Bernard", "Cacciaguida", "Beatrice"],
+			"correctAnswer": "Beatrice"
+		  },
+		  {
+			"question": "Which poet wrote The Divine Comedy?",
+			"options": ["Petrarch", "Boccaccio", "Dante Alighieri", "Geoffrey Chaucer"],
+			"correctAnswer": "Dante Alighieri"
+		  },
+		  {
+			"question": "What sin is punished in the second circle of Hell?",
+			"options": ["Gluttony", "Lust", "Greed", "Wrath"],
+			"correctAnswer": "Lust"
+		  },
+		  {
+			"question": "Who guards the gates of Hell in Inferno?",
+			"options": ["Cerberus", "Pluto", "Minos", "Charon"],
+			"correctAnswer": "Minos"
+		  },
+		  {
+			"question": "What river must souls cross to enter Hell?",
+			"options": ["Styx", "Acheron", "Lethe", "Phlegethon"],
+			"correctAnswer": "Acheron"
+		  },
+		  {
+			"question": "What is the main theme of The Divine Comedy?",
+			"options": ["Love", "Justice", "Faith", "Redemption"],
+			"correctAnswer": "Redemption"
+		  }
+		]
+	  },
+	  {
+		"courseId": 10,
+		"questions": [
+		  {
+			"question": "What is the coldest place on Earth?",
+			"options": ["Arctic", "Antarctica", "Siberia", "Greenland"],
+			"correctAnswer": "Antarctica"
+		  },
+		  {
+			"question": "Which species are commonly found in Antarctica?",
+			"options": ["Lions", "Penguins", "Kangaroos", "Elephants"],
+			"correctAnswer": "Penguins"
+		  },
+		  {
+			"question": "When was the Antarctic Treaty signed?",
+			"options": ["1949", "1959", "1969", "1979"],
+			"correctAnswer": "1959"
+		  },
+		  {
+			"question": "Who was the first person to reach the South Pole?",
+			"options": ["Robert Scott", "Ernest Shackleton", "Roald Amundsen", "Edmund Hillary"],
+			"correctAnswer": "Roald Amundsen"
+		  },
+		  {
+			"question": "What is the primary purpose of the research stations in Antarctica?",
+			"options": ["Military operations", "Scientific research", "Tourism", "Mining"],
+			"correctAnswer": "Scientific research"
+		  },
+		  {
+			"question": "What type of climate characterizes Antarctica?",
+			"options": ["Tropical", "Desert", "Mediterranean", "Polar"],
+			"correctAnswer": "Polar"
+		  },
+		  {
+			"question": "What is a significant feature of the Antarctic Treaty?",
+			"options": ["It allows for mining activities", "It bans military activity", "It promotes commercial fishing", "It allows for permanent settlements"],
+			"correctAnswer": "It bans military activity"
+		  },
+		  {
+			"question": "Which ocean surrounds Antarctica?",
+			"options": ["Atlantic Ocean", "Indian Ocean", "Pacific Ocean", "Southern Ocean"],
+			"correctAnswer": "Southern Ocean"
+		  },
+		  {
+			"question": "What is the main focus of biological research in Antarctica?",
+			"options": ["Tropical plants", "Marine life", "Desert animals", "Mountain flora"],
+			"correctAnswer": "Marine life"
+		  },
+		  {
+			"question": "Which explorer is known for his leadership during the Endurance expedition?",
+			"options": ["Roald Amundsen", "Robert Scott", "Ernest Shackleton", "James Cook"],
+			"correctAnswer": "Ernest Shackleton"
+		  },
+		  {
+			"question": "What is the largest ice shelf in Antarctica?",
+			"options": ["Ross Ice Shelf", "Larsen Ice Shelf", "Ronne Ice Shelf", "Amery Ice Shelf"],
+			"correctAnswer": "Ross Ice Shelf"
+		  },
+		  {
+			"question": "Which species of penguin is the largest in Antarctica?",
+			"options": ["Emperor Penguin", "Adélie Penguin", "Chinstrap Penguin", "Gentoo Penguin"],
+			"correctAnswer": "Emperor Penguin"
+		  },
+		  {
+			"question": "What is the name of the highest peak in Antarctica?",
+			"options": ["Mount Erebus", "Mount Sidley", "Mount Vinson", "Mount Terror"],
+			"correctAnswer": "Mount Vinson"
+		  },
+		  {
+			"question": "Which Antarctic sea is known for its abundant krill population?",
+			"options": ["Weddell Sea", "Ross Sea", "Amundsen Sea", "Scotia Sea"],
+			"correctAnswer": "Weddell Sea"
+		  },
+		  {
+			"question": "What phenomenon occurs during the Antarctic winter, causing months of darkness?",
+			"options": ["Midnight Sun", "Polar Night", "Eclipse", "Aurora Australis"],
+			"correctAnswer": "Polar Night"
+		  }
+		]
+	  }
 	]
-  },
-  {
-	"courseId": 4,
-	"questions": [
-	  {
-		"question": "Which river is commonly regarded as the longest river in the world?",
-		"options": ["Amazon", "Yangtze", "Mississippi", "Nile"],
-		"correctAnswer": "Nile"
-	  },
-	  {
-		"question": "How long is the Nile River?",
-		"options": ["4,130 miles", "3,976 miles", "2,345 miles", "1,234 miles"],
-		"correctAnswer": "4,130 miles"
-	  },
-	  {
-		"question": "How many countries does the Nile River flow through?",
-		"options": ["Five", "Seven", "Eleven", "Thirteen"],
-		"correctAnswer": "Eleven"
-	  },
-	  {
-		"question": "Which of these countries is NOT part of the Nile River basin?",
-		"options": ["Tanzania", "Uganda", "Brazil", "Egypt"],
-		"correctAnswer": "Brazil"
-	  },
-	  {
-		"question": "What is the significance of the Nile Delta?",
-		"options": ["It is a major desert", "It is a rich agricultural region", "It is a mountain range", "It is an island"],
-		"correctAnswer": "It is a rich agricultural region"
-	  },
-	  {
-		"question": "Which ancient civilization was primarily based around the Nile River?",
-		"options": ["Mesopotamia", "Indus Valley", "Ancient Egypt", "Maya"],
-		"correctAnswer": "Ancient Egypt"
-	  },
-	  {
-		"question": "What did the Aswan High Dam create?",
-		"options": ["Lake Victoria", "Lake Tanganyika", "Lake Nasser", "Lake Chad"],
-		"correctAnswer": "Lake Nasser"
-	  },
-	  {
-		"question": "When was the Aswan High Dam completed?",
-		"options": ["1950", "1965", "1970", "1985"],
-		"correctAnswer": "1970"
-	  },
-	  {
-		"question": "What type of geographical feature is the Nile Delta?",
-		"options": ["A mountain range", "A desert", "A river delta", "A peninsula"],
-		"correctAnswer": "A river delta"
-	  },
-	  {
-		"question": "How has the Nile River impacted agriculture in Egypt?",
-		"options": ["It has no impact", "It provides fertile land", "It creates deserts", "It reduces crop yield"],
-		"correctAnswer": "It provides fertile land"
-	}
-]
-},
-{
-"courseId": 5,
-"questions": [
-  {
-	"question": "Which form of government was developed in Athens during the 5th century BC?",
-	"options": ["Monarchy", "Oligarchy", "Democracy", "Dictatorship"],
-	"correctAnswer": "Democracy"
-  },
-  {
-	"question": "What were the Persian Wars?",
-	"options": ["A series of conflicts between Greece and the Persian Empire", "A civil war in Greece", "A war between Rome and Persia", "A trade war between Greece and Persia"],
-	"correctAnswer": "A series of conflicts between Greece and the Persian Empire"
-  },
-  {
-	"question": "Which period followed the Persian Wars and saw a cultural and political flowering in Athens?",
-	"options": ["The Dark Ages", "The Golden Age", "The Hellenistic Period", "The Roman Period"],
-	"correctAnswer": "The Golden Age"
-  },
-  {
-	"question": "Who fought in the Peloponnesian War?",
-	"options": ["Athens and Sparta", "Rome and Carthage", "Persia and Egypt", "Athens and Thebes"],
-	"correctAnswer": "Athens and Sparta"
-  },
-  {
-	"question": "Who was Alexander the Great?",
-	"options": ["A philosopher", "A playwright", "A conqueror", "A poet"],
-	"correctAnswer": "A conqueror"
-  },
-  {
-	"question": "What was the Hellenistic Period?",
-	"options": ["The period following the death of Alexander the Great", "The early period of Greek history", "The period of Greek colonization", "The time of the Persian Wars"],
-	"correctAnswer": "The period following the death of Alexander the Great"
-  },
-  {
-	"question": "Which famous structure was built during the Golden Age of Athens?",
-	"options": ["The Colosseum", "The Parthenon", "The Pyramids", "The Great Wall"],
-	"correctAnswer": "The Parthenon"
-  },
-  {
-	"question": "Which battle was a key conflict during the Persian Wars?",
-	"options": ["Battle of Thermopylae", "Battle of Actium", "Battle of Tours", "Battle of Hastings"],
-	"correctAnswer": "Battle of Thermopylae"
-  },
-  {
-	"question": "What city was the center of Greek learning and culture during the Hellenistic Period?",
-	"options": ["Athens", "Alexandria", "Sparta", "Thebes"],
-	"correctAnswer": "Alexandria"
-  },
-  {
-	"question": "Which philosopher taught Alexander the Great?",
-	"options": ["Socrates", "Plato", "Aristotle", "Epicurus"],
-	"correctAnswer": "Aristotle"
   }
-]
-},
-{
-"courseId": 6,
-"questions": [
-  {
-	"question": "Where was Vincent van Gogh born?",
-	"options": ["France", "Netherlands", "Germany", "Belgium"],
-	"correctAnswer": "Netherlands"
-  },
-  {
-	"question": "In which city did van Gogh become influenced by the Impressionists?",
-	"options": ["Paris", "London", "Amsterdam", "Berlin"],
-	"correctAnswer": "Paris"
-  },
-  {
-	"question": "What is the title of the famous series of paintings van Gogh created featuring sunflowers?",
-	"options": ["Sunflowers", "Irises", "Wheatfields", "Starry Night"],
-	"correctAnswer": "Sunflowers"
-  },
-  {
-	"question": "Which mental health issue did van Gogh struggle with?",
-	"options": ["Depression", "Anxiety", "Schizophrenia", "Bipolar Disorder"],
-	"correctAnswer": "Depression"
-  },
-  {
-	"question": "In which city did van Gogh paint 'Starry Night'?",
-	"options": ["Arles", "Saint-Rémy-de-Provence", "Paris", "Auvers-sur-Oise"],
-	"correctAnswer": "Saint-Rémy-de-Provence"
-  },
-  {
-	"question": "What year did Vincent van Gogh die?",
-	"options": ["1880", "1890", "1900", "1910"],
-	"correctAnswer": "1890"
-  },
-  {
-	"question": "What was the relationship between van Gogh and Theo?",
-	"options": ["Friends", "Brothers", "Cousins", "Colleagues"],
-	"correctAnswer": "Brothers"
-  },
-  {
-	"question": "Which painting is considered one of van Gogh's most famous works?",
-	"options": ["The Scream", "The Persistence of Memory", "Mona Lisa", "Starry Night"],
-	"correctAnswer": "Starry Night"
-  },
-  {
-	"question": "Where is the Van Gogh Museum located?",
-	"options": ["Paris", "London", "Amsterdam", "Berlin"],
-	"correctAnswer": "Amsterdam"
-  },
-  {
-	"question": "Which artistic movement is van Gogh most associated with?",
-	"options": ["Impressionism", "Post-Impressionism", "Cubism", "Surrealism"],
-	"correctAnswer": "Post-Impressionism"
-  }
-]
-}
-]
-}
+  

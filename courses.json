@@ -251,8 +251,213 @@
 	  {
 		"title": "Van Gogh Museum - Amsterdam",
 		"url": "https://www.vangoghmuseum.nl/en"
-	  }
+		}
 	]
-  }
-]
-}
+	},
+	{
+	"id": 7,
+	"title": "World War I",
+	"section": "History",
+	"duration": "4 hours",
+	"image": "https://cdn.britannica.com/72/157072-050-CC57C268/German-soldiers-gas-battlefields-World-War-I.jpg",
+	"description": "World War I, also known as the Great War, was a global war originating in Europe that lasted from 28 July 1914 to 11 November 1918. Contemporaneously described as 'the war to end all wars', it led to the mobilization of more than 70 million military personnel, making it one of the largest wars in history. The most important aspects of World War I include:",
+	"events": [
+	{
+		"title": "Assassination of Archduke Franz Ferdinand",
+		"content": "The assassination of Archduke Franz Ferdinand of Austria in June 1914 led to a series of events that ultimately triggered World War I."
+	},
+	{
+		"title": "The Western Front",
+		"content": "The Western Front was the main theatre of war during World War I. It was characterized by trench warfare and saw significant battles such as the Battle of the Somme and the Battle of Verdun."
+	},
+	{
+		"title": "The Eastern Front",
+		"content": "The Eastern Front of World War I was a theatre of operations that encompassed at its greatest extent the entire frontier between the Russian Empire and Romania on one side and the Austro-Hungarian Empire, Bulgaria, the Ottoman Empire, and the German Empire on the other."
+	},
+	{
+		"title": "The Home Front",
+		"content": "The Home Front during World War I saw significant changes in society, including the role of women in the workforce and the introduction of rationing."
+	},
+	{
+		"title": "The End of the War",
+		"content": "The war ended on 11 November 1918, when an armistice was signed. The Treaty of Versailles, signed in 1919, formally ended the war and imposed heavy reparations and territorial losses on Germany."
+	}
+	],
+	"video": "https://www.youtube.com/embed/_XPZQ0LAlR4?rel=0&autoplay=0&showinfo=0&controls=1",
+	"resources": [
+	{
+		"title": "World War I - History",
+		"url": "https://www.history.com/topics/world-war-i/world-war-i-history"
+	},
+	{
+		"title": "World War I - National Archives",
+		"url": "https://www.nationalarchives.gov.uk/pathways/firstworldwar/index.htm"
+	}
+	]
+	},
+	{
+	"id": 8,
+	"title": "Shakespeare's Life and Works",
+	"section": "Literature",
+	"duration": "3 hours",
+	"image": "https://cdn.britannica.com/03/188603-050-9C9982C3/William-Shakespeare.jpg",
+	"description": "William Shakespeare was an English playwright, poet, and actor, widely regarded as the greatest writer in the English language and the world's greatest dramatist. He is often called England's national poet and the 'Bard of Avon'. The most important aspects of Shakespeare's life and works include:",
+	"events": [
+	{
+		"title": "Early Life",
+		"content": "William Shakespeare was born in Stratford-upon-Avon in 1564. His exact birthdate is unknown, but it is traditionally observed on April 23."
+	},
+	{
+		"title": "The Lost Years",
+		"content": "The period between 1585 and 1592 is known as Shakespeare's 'lost years' because there are no records of his activities during this time."
+	},
+	{
+		"title": "London and the Theatre",
+		"content": "By 1592, Shakespeare had become an established actor and playwright in London. He was a member of the Lord Chamberlain's Men, later known as the King's Men."
+	},
+	{
+		"title": "Major Works",
+		"content": "Shakespeare wrote 39 plays, 154 sonnets, and two long narrative poems. His works include tragedies like 'Hamlet', 'Othello', 'King Lear', and 'Macbeth', comedies like 'A Midsummer Night's Dream' and 'Twelfth Night', and histories like 'Henry V' and 'Richard III'."
+	},
+	{
+		"title": "Final Years",
+		"content": "Shakespeare returned to Stratford in around 1613, where he lived until his death in 1616. He was buried in the Holy Trinity Church in Stratford-upon-Avon."
+	}
+	],
+	"video": "https://www.youtube.com/embed/geev441vbMI?rel=0&autoplay=0&showinfo=0&controls=1",
+	"resources": [
+	{
+		"title": "Shakespeare's Life",
+		"url": "https://www.britannica.com/biography/William-Shakespeare"
+	},
+	{
+		"title": "Shakespeare's Works",
+		"url": "https://www.folger.edu/shakespeares-works"
+	}
+	]
+	},
+	{
+	"id": 9,
+	"title": "The Solar System",
+	"section": "Astronomy",
+	"duration": "2.5 hours",
+	"image": "https://cdn.britannica.com/84/198584-050-C9C00B50/Solar-System-planets.jpg",
+	"description": "The Solar System is the gravitationally bound system of the Sun and the objects that orbit it, either directly or indirectly. Of the objects that orbit the Sun directly, the largest are the eight planets, with the remainder being smaller objects, such as dwarf planets and small Solar System bodies. The most important aspects of the Solar System include:",
+	"events": [
+	{
+		"title": "The Sun",
+		"content": "The Sun is the star at the center of the Solar System. It is a nearly perfect sphere of hot plasma, and it accounts for about 99.86% of the total mass of the Solar System."
+	},
+	{
+		"title": "The Inner Planets",
+		"content": "The inner planets are Mercury, Venus, Earth, and Mars. These planets are primarily composed of rock and metal."
+	},
+	{
+		"title": "The Outer Planets",
+		"content": "The outer planets are Jupiter, Saturn, Uranus, and Neptune. These planets are significantly larger than the inner planets and are primarily composed of hydrogen, helium, and other gases."
+	},
+	{
+		"title": "The Asteroid Belt",
+		"content": "The asteroid belt is a region of the Solar System located between the orbits of Mars and Jupiter. It is home to a vast number of irregularly shaped bodies called asteroids or minor planets."
+	},
+	{
+		"title": "Dwarf Planets",
+		"content": "Dwarf planets are celestial bodies that orbit the Sun and have sufficient mass for their self-gravity to overcome rigid body forces, but have not cleared their neighboring region of other material. The most well-known dwarf planet is Pluto."
+	}
+	],
+	"video": "https://www.youtube.com/embed/libKVRa01L8?rel=0&autoplay=0&showinfo=0&controls=1",
+	"resources": [
+	{
+		"title": "The Solar System",
+		"url": "https://www.nasa.gov/solar-system"
+	},
+	{
+		"title": "The Solar System - National Geographic",
+		"url": "https://www.nationalgeographic.com/science/space/solar-system/"
+	}
+	]
+	},
+	{
+	"id": 10,
+	"title": "The French Revolution",
+	"section": "History",
+	"duration": "3.5 hours",
+	"image": "https://cdn.britannica.com/47/174847-050-68BCB2E2/French-Revolution-July-14-1789.jpg",
+	"description": "The French Revolution was a period of far-reaching social and political upheaval in France and its colonies that lasted from 1789 until 1799. It was partially carried forward by Napoleon during the later expansion of the French Empire. The most important aspects of the French Revolution include:",
+	"events": [
+	{
+		"title": "The Estates-General",
+		"content": "The Estates-General of 1789 was a general assembly representing the French estates of the realm: the clergy, the nobility, and the commoners. It was the first meeting of the Estates-General since 1614."
+	},
+	{
+		"title": "The Storming of the Bastille",
+		"content": "The Storming of the Bastille on 14 July 1789 was a pivotal event in the French Revolution. The medieval fortress, armory, and political prison known as the Bastille represented royal authority in the center of Paris."
+	},
+	{
+		"title": "The Reign of Terror",
+		"content": "The Reign of Terror (1793-1794) was a period of the French Revolution characterized by a wave of executions of presumed enemies of the state. The guillotine became the symbol of the revolutionary cause."
+	},
+	{
+		"title": "The Rise of Napoleon",
+		"content": "Napoleon Bonaparte rose to prominence during the latter stages of the French Revolution. In 1799, he staged a coup d'état and established himself as the ruler of France."
+	},
+	{
+		"title": "The Napoleonic Wars",
+		"content": "The Napoleonic Wars (1803-1815) were a series of major conflicts pitting the French Empire and its allies, led by Napoleon I, against a fluctuating array of European powers formed into various coalitions."
+	}
+	],
+	"video": "https://www.youtube.com/embed/wXsZbkt0yqo?rel=0&autoplay=0&showinfo=0&controls=1",
+	"resources": [
+	{
+		"title": "The French Revolution",
+		"url": "https://www.history.com/topics/france/french-revolution"
+	},
+	{
+		"title": "The French Revolution - Britannica",
+		"url": "https://www.britannica.com/event/French-Revolution"
+	}
+	]
+	},
+	{
+	"id": 11,
+	"title": "Artificial Intelligence",
+	"section": "Technology",
+	"duration": "3 hours",
+	"image": "https://cdn.britannica.com/15/188115-050-BD9C59C0/robot-artificial-intelligence.jpg",
+	"description": "Artificial Intelligence (AI) is the simulation of human intelligence in machines that are programmed to think and learn like humans. AI has numerous applications, including in areas such as robotics, natural language processing, and computer vision. The most important aspects of AI include:",
+	"events": [
+	{
+		"title": "History of AI",
+		"content": "The concept of AI has been around since ancient times, but modern AI began with the development of the first computers in the 1940s and 1950s. The term 'artificial intelligence' was coined in 1956 at the Dartmouth Conference."
+	},
+	{
+		"title": "Machine Learning",
+		"content": "Machine learning is a subset of AI that involves the use of algorithms and statistical models to allow computers to learn from data and make predictions or decisions without being explicitly programmed."
+	},
+	{
+		"title": "Deep Learning",
+		"content": "Deep learning is a subset of machine learning that uses neural networks with many layers (hence 'deep') to model complex patterns in data. It has led to significant advances in areas such as image and speech recognition."
+	},
+	{
+		"title": "Applications of AI",
+		"content": "AI has numerous applications, including in robotics (e.g., autonomous vehicles), natural language processing (e.g., chatbots), and computer vision (e.g., facial recognition)."
+	},
+	{
+		"title": "Ethics of AI",
+		"content": "The development and deployment of AI raise ethical concerns, including issues related to privacy, bias, and the potential impact on jobs and society. There is ongoing debate about how to ensure that AI is developed and used responsibly."
+	}
+	],
+	"video": "https://www.youtube.com/embed/h0JykYXAh18?rel=0&autoplay=0&showinfo=0&controls=1",
+	"resources": [
+	{
+		"title": "What is AI?",
+		"url": "https://www.ibm.com/cloud/learn/what-is-artificial-intelligence"
+	},
+	{
+		"title": "AI - Wikipedia",
+		"url": "https://en.wikipedia.org/wiki/Artificial_intelligence"
+	}
+	]
+	}
+	]
+	}

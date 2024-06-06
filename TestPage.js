@@ -14,6 +14,7 @@ const TestPage = ({ route, navigation }) => {
   const [isModalVisible, setModalVisible] = useState(false);
   const [score, setScore] = useState(0);
   const courseProgress = progress[course.id] || { articleRead: false, videoWatched: false };
+  const [showCorrectAnswers, setShowCorrectAnswers] = useState(false);
 
   const [testTaken, setTestTaken] = useState(courseProgress.testTaken);
 
@@ -24,6 +25,11 @@ const TestPage = ({ route, navigation }) => {
       setAnswers(Array(courseTest.questions.length).fill(null));
     }
   }, [course.id]);
+
+  const handleShowAnswers = () => {
+    setShowCorrectAnswers(true);
+    setModalVisible(false);
+  };
 
   const handleOptionPress = (index, option) => {
     const newAnswers = [...answers];
@@ -39,7 +45,7 @@ const TestPage = ({ route, navigation }) => {
       }
     });
     setScore(newScore);
-    if (newScore >= 9) {
+    if (newScore >= 12) {
       updateProgress(course.id, { articleRead: true, videoWatched: true, testTaken: true });
     }
     setModalVisible(true);
@@ -64,7 +70,6 @@ const TestPage = ({ route, navigation }) => {
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      {/* <Text style={styles.title}>Test Page</Text> */}
       {questions.map((question, index) => (
         <View key={index} style={styles.questionContainer}>
           <Text style={styles.questionText}>{question.question}</Text>
@@ -74,6 +79,7 @@ const TestPage = ({ route, navigation }) => {
               style={[
                 styles.optionButton,
                 answers[index] === option && styles.selectedOptionButton,
+                showCorrectAnswers && option === question.correctAnswer && styles.correctAnswer
               ]}
               onPress={() => handleOptionPress(index, option)}
             >
@@ -81,6 +87,7 @@ const TestPage = ({ route, navigation }) => {
                 style={[
                   styles.optionButtonText,
                   answers[index] === option && styles.selectedOptionButtonText,
+                  showCorrectAnswers && option === question.correctAnswer && styles.correctAnswerText
                 ]}
               >
                 {option}
@@ -98,7 +105,7 @@ const TestPage = ({ route, navigation }) => {
         totalQuestions={questions.length}
         onRetry={handleRetry}
         onGoBack={handleGoBack}
-        onRetakeQuiz={handleRetakeQuiz}
+        onShowAnswers={handleShowAnswers}
       />
     </ScrollView>
   );
@@ -133,7 +140,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   selectedOptionButton: {
-    backgroundColor: '#a1e5a1',
+    backgroundColor: '#E6E6FA',
   },
   optionButtonText: {
     fontSize: 16,
@@ -152,6 +159,10 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
     color: '#FFFFFF',
+  },
+  correctAnswerText: {
+    color: '#3b7d3b',
+    fontWeight: 'bold',
   },
 });
 

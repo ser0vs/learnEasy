@@ -1,7 +1,7 @@
 import React from 'react';
 import { Modal, View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 
-const CustomModal = ({ visible, score, totalQuestions, onRetry, onGoBack, onRetakeQuiz }) => {
+const CustomModal = ({ visible, score, totalQuestions, onRetry, onGoBack, onRetakeQuiz, onShowAnswers  }) => {
   return (
     <Modal
       transparent={true}
@@ -13,26 +13,31 @@ const CustomModal = ({ visible, score, totalQuestions, onRetry, onGoBack, onReta
         <View style={styles.modalContent}>
           <Text style={styles.modalTitle}>Results</Text>
           <Text style={styles.modalMessage}>
-            {score <= 5 
+            {score <= 8 
               ? `You scored ${score} out of ${totalQuestions} 😔. Maybe you want to take the course again?`
-              : score > 5 && score <= 8
+              : score > 8 && score <= 12
               ? `You scored ${score} out of ${totalQuestions} 😊.`
               : `Well done 🎉! You scored ${score} out of ${totalQuestions}.`}
           </Text>
           <View style={styles.buttonContainer}>
-            {score <= 5 && (
+            {score <= 8 && (
               <TouchableOpacity onPress={onRetry} style={styles.modalButton}>
                 <Text style={styles.modalButtonText}>Yes, I would be glad to take it again</Text>
               </TouchableOpacity>
             )}
             <TouchableOpacity onPress={onGoBack} style={styles.modalButton}>
-              <Text style={styles.modalButtonText}>{score <= 5 ? "Maybe later" : "Go back"}</Text>
+              <Text style={styles.modalButtonText}>{score <= 8 ? "Maybe later" : "Go back"}</Text>
             </TouchableOpacity>
-            {(score <= 5 || (score > 5 && score <= 8)) && (
+            {(score <= 5 || (score > 5 && score <= 12)) && (
               <TouchableOpacity onPress={onRetakeQuiz} style={styles.modalButton}>
                 <Text style={styles.modalButtonText}>Retake quiz</Text>
               </TouchableOpacity>
             )}
+            {(score < 5 || (score >= 5 && score <= 15)) && (
+              <TouchableOpacity onPress={onShowAnswers} style={styles.modalButton}>
+                <Text style={styles.modalButtonText}>Show Right Answers</Text>
+              </TouchableOpacity>
+              )}
           </View>
         </View>
       </View>
