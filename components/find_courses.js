@@ -11,18 +11,28 @@ const { width, height } = Dimensions.get('window');
 const FindCourses = () => {
   const [courses, setCourses] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
-  const { addCourse } = useContext(CourseContext);
+  const [addedCourses, setAddedCourses] = useState([]);
+  const { addCourse, myCourses } = useContext(CourseContext); 
   const navigation = useNavigation();
 
   useEffect(() => {
     setCourses(courseData.courses);
-  }, []);
+    const addedCourseTitles = myCourses.map(course => course.name);
+    setAddedCourses(addedCourseTitles);
+  }, [myCourses]);
+
+  const handleAddCourse = (course) => {
+    addCourse({ name: course.title, hours: course.duration, description: course.section, level: course.level });
+    setAddedCourses([...addedCourses, course.title]);
+  };
 
   const filteredCourses = courses.filter(course =>
     course.title.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
   const CourseCard = ({ title, duration, description, section, course }) => {
+    const isAdded = addedCourses.includes(course.title);
+
     return (
       <TouchableOpacity onPress={() => navigation.navigate('CourseDetails', { course })}>
         <View style={styles.courseCard}>
@@ -35,14 +45,14 @@ const FindCourses = () => {
           <View style={styles.descriptionContainer}>
             <Text style={styles.courseDescription}>{description}</Text>
             <Ionicons
-              name="add-outline"
+              name={isAdded ? "checkmark-outline" : "add-outline"}
               size={20}
-              color="gray"
-              onPress={() => addCourse({ name: title, hours: duration, description, level: section })}
+              color={isAdded ? "green" : "gray"}
+              onPress={() => !isAdded && handleAddCourse(course)}
             />
           </View>
           <View style={styles.courseFooter}>
-            <Text style={[styles.courseLevel, section === 'Beginner Friendly' ? styles.beginner : styles.intermediate]}>
+            <Text style={[styles.courseLevel, section === 'Beginner' ? styles.beginner : styles.intermediate]}>
               {section}
             </Text>
             <View style={styles.icons}>
@@ -65,11 +75,6 @@ const FindCourses = () => {
           scale="1"
         />
       </Svg>
-      {/* <View style={styles.header}>
-        <Ionicons name="arrow-back-outline" size={24} color="black" style={styles.backIcon} onPress={() => navigation.navigate('Home')} />
-        <Text style={styles.headerText}>Find new courses</Text>
-        <Ionicons name="arrow-forward-outline" size={24} color="black" style={styles.forwardIcon} onPress={() => navigation.navigate('MyCourse')} />
-      </View> */}
       <TextInput
         style={styles.searchInput}
         placeholder="Search for courses"
